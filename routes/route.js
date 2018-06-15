@@ -3,7 +3,7 @@
 const route = {
     template: `
     `,
-    controller: [MuseumService, function(MuseumService) {
+    controller: ["TestService", function(TestService) {
         const vm = this;
     }]
 }
