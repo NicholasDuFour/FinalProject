@@ -3,6 +3,7 @@
 function TestService($http) {
   let artList = [];
   let mediumList = []; 
+  let colorList = []; 
   let key = "88bb71d0-7015-11e8-9d38-6fd658e729d6"; 
 
   const getInfo = () =>{
@@ -27,10 +28,22 @@ function TestService($http) {
     })
   }
 
+  const getColor = () => {
+    return $http({
+      method: 'GET',
+      url:`https://api.harvardartmuseums.org/object?classification=Prints&size=15&page=4&apikey=${key}`
+    }).then((response) => {
+      console.log(response); 
+      colorList = response; 
+      return colorList; 
+    })
+  }
+
 
   return {
     getInfo,
-    getMedium
+    getMedium,  
+    getColor
   }
 }
 

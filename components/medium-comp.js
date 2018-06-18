@@ -2,6 +2,7 @@
 
 const mediumComponent = {
     template: `
+    
         <button type="button" ng-click="$ctrl.displayMedium();">STONE</button>
         <button type="button" ng-click="$ctrl.material('Ceramic');">CERAMIC</button>
         <button type="button" ng-click="$ctrl.material('Watercolor');">WATERCOLOR</button>
