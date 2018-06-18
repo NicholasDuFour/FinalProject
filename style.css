@@ -1,6 +1,6 @@
-*::before, *::after, * {
+ * {
     box-sizing: border-box; 
-    margin: 0; 
+    margin: 20px; 
     padding: 0; 
     border: none;  
 }
@@ -12,7 +12,16 @@ body {
     flex-direction: column; 
     align-items: center;
     justify-content: center; 
-    width: 100vw;
+    font-family: Helvetica, Arial, sans-serif; 
+    text-transform: uppercase; 
+    /* width: 100vw; */
+}
+
+.header {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    /* width: 100vw;  */
 }
 
 
