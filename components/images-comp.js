@@ -15,12 +15,12 @@ const component = {
     const vm = this;
     vm.artList = [];
     TestService.getInfo().then((response) =>{
-      // for (let i = 0; i < 15; i++) {
-      //   if (response.data.records[i].imagecount > 0){
-      //     vm.artList.push(response.data.records[i]);
-      //     // console.log(response.data.records[i]);
-      //   }
-      // }
+      for (let i = 0; i < 15; i++) {
+        if (response.data.records[i].imagecount > 0){
+          vm.artList.push(response.data.records[i]);
+          console.log(response.data.records[i]);
+        }
+      }
     })
 
   }]
