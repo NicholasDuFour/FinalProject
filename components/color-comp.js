@@ -1,6 +1,6 @@
 "use strict";
 
-const testComp = {
+const colorComponent = {
   template: `
   <button type="button" ng-click="$ctrl.displayMedium('Graphite');">Paintings</button>
   <button type="button" ng-click="$ctrl.displayClass('Drawings');">Drawings</button>
@@ -49,6 +49,6 @@ const testComp = {
 
 angular
   .module("app")
-  .component("testComp", testComp)
+  .component("colorComponent", colorComponent)
 
   

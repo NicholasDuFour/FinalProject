@@ -1,6 +1,6 @@
 "use strict"; 
 
-const mediumComponent = {
+const periodComponent = {
     template: `
     
         <button type="button" ng-click="$ctrl.displayMedium();">STONE</button>
@@ -26,7 +26,7 @@ const mediumComponent = {
 
 angular 
     .module("app")
-    .component("mediumComponent", mediumComponent); 
+    .component("periodComponent", periodComponent); 
 
 
 

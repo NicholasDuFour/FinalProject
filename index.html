@@ -3,36 +3,37 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Blank Canvas: The Art of Discovery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display%7CPlayfair+Display+SC" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <header class="header">
         <img class="logo" src="images/logo.png">
         <h1>Blank Canvas</h1>
     </header>
+    <a href="#!/type-comp">Type</a>
+    <ng-view></ng-view>
     <div class="container">
         <img class="image" src="images/igor-miske-177849-unsplash.jpg" alt="museum"> 
-        <div class="text-wrapper">The Art of Discovery</div>
-        
-        <!-- <div>
-            <div class="bottom-right">The Art of Discovery</div>
-        </div> -->
     </div>
+    
+    <div class="text-wrapper">The Art of Discovery</div>
 
+    <section class="colorlink">
+        <a href="index.html">color<img class="colorimage" src="images/steve-johnson.jpg"></a>
+    </section>
 
-    <component></component>
-    <medium-component></medium-component> 
 
     <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.6.5/angular-route.js"></script>
     <script src="module.js"></script>
+    <script src="components/color-comp.js"></script> 
     <script src="components/images-comp.js"></script>
-    <script src="components/medium-comp.js"></script>
-    <script src="components/test-comp.js"></script>
+    <script src="components/period-comp.js"></script>
+    <script src="components/type-comp.js"></script>
     <script src="routes/route.js"></script>
     <script src="service.js"></script>
 </body>

@@ -1,6 +1,6 @@
 "use strict";
 
-const component = {
+const imagesComponent = {
   template: `
 
   <div class="image" ng-repeat="item in $ctrl.artList track by $index">
@@ -31,7 +31,7 @@ const component = {
 
 angular
   .module("app")
-  .component("component", component)
+  .component("imagesComponent", imagesComponent)
 
 
   /*

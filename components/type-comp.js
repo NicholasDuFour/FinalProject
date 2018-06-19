@@ -1,6 +1,5 @@
-const testComp = {
+const typeComponent = {
   template: `
-  <button type="button" ng-click="$ctrl.displayMedium('Graphite');">Paintings</button>
   <button type="button" ng-click="$ctrl.displayClass('Drawings');">Drawings</button>
   <button type="button" ng-click="$ctrl.displayClass('Prints');">Prints</button>
   <button type="button" ng-click="$ctrl.displayClass('Sculpture');">Sculpture</button>
@@ -30,6 +29,6 @@ const testComp = {
 
 angular
   .module("app")
-  .component("testComp", testComp)
+  .component("typeComponent", typeComponent)
 
   
