@@ -15,9 +15,9 @@ angular
             <color-component></color-component>
              `
         })
-        .when("/period-comp", {
+        .when("/culture-comp", {
             template: `
-            <period-component></period-component>
+            <culture-component></culture-component>
              `
         })
         .when("/type-comp", {

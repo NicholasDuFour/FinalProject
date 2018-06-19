@@ -65,6 +65,8 @@ header {
     display: flex;
     align-items: center;
     position: relative;
+    width: 340px;
+    margin: 0 auto;
 }
 
 .colorlink p  {
@@ -72,7 +74,7 @@ header {
   position: absolute;
   top: -15px;
   color: white;
-  left: 142px;
+  left: 140px;
   font-size: 30px;
 }
 
@@ -89,7 +91,8 @@ a:visited {
 .colorimage {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 70%;
+    margin:0 auto;
     height: 50px;
     margin-top: 20px;
     z-index: 2;
