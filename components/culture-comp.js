@@ -1,16 +1,21 @@
 "use strict"; 
 
-const periodComponent = {
+const cultureComponent = {
     template: `
         <button type="button" ng-click="$ctrl.displayCulture('American');">American</button>
         <button type="button" ng-click="$ctrl.displayCulture('Korean');">Korean</button>
-        <button type="button" ng-click="$ctrl.displayCulture('Roman');">Roman</button>
-        <button type="button" ng-click="$ctrl.displayCulture('Irish');">Irish</button>
+        <button type="button" ng-click="$ctrl.displayCulture('Egyptian');">Egyptian</button>
+        <button type="button" ng-click="$ctrl.displayCulture('Italian');">Italian</button>
+        <button type="button" ng-click="$ctrl.displayCulture('French');">French</button>
+        <button type="button" ng-click="$ctrl.displayCulture('Japanese');">Japanese</button>
+        <button type="button" ng-click="$ctrl.displayCulture('Spanish');">Spanish</button>
+        <button type="button" ng-click="$ctrl.displayCulture('Flemish');">Flemish</button>
+
 
         <div ng-repeat="item in $ctrl.cultureList track by $index" ng-show="item.images[1]">
-        <h3>{{ item.title }}</h3>
-        <img ng-src="{{item.images[0].baseimageurl}}">
-      </div>
+            <h3>{{ item.title }}</h3>
+            <img ng-src="https://ids.lib.harvard.edu/ids/view/{{item.images[0].idsid}}">
+        </div>
 
     `, 
 
@@ -35,5 +40,5 @@ const periodComponent = {
 
 angular 
     .module("app")
-    .component("periodComponent", periodComponent); 
+    .component("cultureComponent", cultureComponent); 
 

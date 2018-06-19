@@ -13,7 +13,7 @@ function TestService($http) {
   const getInfo = () =>{
     return $http({
       method: 'GET',
-      url: `https://api.harvardartmuseums.org/object?size=15&page=4&apikey=${key}`
+      url: `https://api.harvardartmuseums.org/object?size=100&page=4&apikey=${key}`
     }).then((response)=>{
       // console.log(response); 
       artList = response;
@@ -48,10 +48,10 @@ function TestService($http) {
   const getColor = (colorType) => {
     return $http({
       method: 'GET',
-      url:`https://api.harvardartmuseums.org/object?period=${colorType}&size=15&page=4&apikey=${key}`
+      url:`https://api.harvardartmuseums.org/object?color=${colorType}&size=200&page=4&apikey=${key}`
     }).then((response) => {
-      console.log(response); 
       colorList = response; 
+      console.log(response); 
       return colorList; 
     })
   }
