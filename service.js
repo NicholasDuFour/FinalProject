@@ -2,7 +2,7 @@
 
 function TestService($http) {
   let artList = [];
-  let mediumList = []; 
+  let cultureList = []; 
   let classList = [];
   let colorList = []; 
 
@@ -34,21 +34,21 @@ function TestService($http) {
     })
   }
 
-  const getMedium = (medType) => {
+  const getCulture = (cultureType) => {
     return $http({
       method: 'GET',
-      url: `https://api.harvardartmuseums.org/object?mediumname=${medType}&size=100&page=4&apikey=${key}`
+      url: `https://api.harvardartmuseums.org/object?culture=${cultureType}&size=100&page=4&apikey=${key}`
     }).then((response)=>{
-      console.log(response); 
-      mediumList = response;
-      return mediumList;
+      // console.log(response); 
+      cultureList = response;
+      return cultureList;
     })
   }
 
-  const getColor = () => {
+  const getColor = (colorType) => {
     return $http({
       method: 'GET',
-      url:`https://api.harvardartmuseums.org/object?classification=Prints&size=15&page=4&apikey=${key}`
+      url:`https://api.harvardartmuseums.org/object?period=${colorType}&size=15&page=4&apikey=${key}`
     }).then((response) => {
       console.log(response); 
       colorList = response; 
@@ -57,35 +57,10 @@ function TestService($http) {
   }
 
 
-   const getAllMediums = () => {
-    return $http({
-      method: 'GET',
-      url: `https://api.harvardartmuseums.org/medium?&apikey=${key}`
-    }).then((response)=>{
-      console.log(response); 
-      return response;
-    })
-   }
-
-
-  // const getMedium = () => {
-  //   return $http({
-  //       method: 'GET', 
-  //       url: `https://api.harvardartmuseums.org/medium?q=pathforward:Stone&apikey=${key}`
-  //   }).then((response) => {
-  //     console.log(response); 
-  //     mediumList = response; 
-  //     return mediumList;
-  //   })
-  // }
-
-
   return {
     getInfo,
     getClassification,
-    getMedium,
-    getAllMediums,
-    getMedium,  
+    getCulture,  
     getColor
 
   }
