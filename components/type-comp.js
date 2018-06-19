@@ -1,15 +1,15 @@
 const typeComponent = {
   template: `
-  <button type="button" ng-click="$ctrl.displayClass('Drawings');">Drawings</button>
+  <button type="button" ng-click="$ctrl.displayClass('Paintings');">Paintings</button>
   <button type="button" ng-click="$ctrl.displayClass('Prints');">Prints</button>
   <button type="button" ng-click="$ctrl.displayClass('Sculpture');">Sculpture</button>
   <button type="button" ng-click="$ctrl.displayClass('Photographs');">Photographs</button>
-  <button type="button" ng-click="$ctrl.displayClass('Coins');">Coins</button>
+  <button type="button" ng-click="$ctrl.displayClass('StainedGlass');">Stained Glass</button>
 
 
-  <div ng-repeat="item in $ctrl.classList track by $index">
+  <div ng-repeat="item in $ctrl.classList track by $index" ng-show="item.images[1]">
     <h3>{{ item.title }}</h3>
-    <img ng-src="https://ids.lib.harvard.edu/ids/view/{{item.id}}">
+    <img ng-src="{{item.images[0].baseimageurl}}">
   </div>
   `,
   controller: ["TestService", function(TestService){
@@ -18,7 +18,8 @@ const typeComponent = {
     vm.displayClass = function (classType) {
     TestService.getClassification(classType).then((response) => {
       vm.artInfo = response;
-      for (let i= 0; i < 15; i++) {
+      vm.classList = [];
+      for (let i= 0; i < 100; i++) {
         vm.classList.push(response.data.records[i]);
         console.log(response.data.records[i]);
       }
