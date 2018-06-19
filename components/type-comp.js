@@ -4,7 +4,8 @@ const typeComponent = {
   <button type="button" ng-click="$ctrl.displayClass('Prints');">Prints</button>
   <button type="button" ng-click="$ctrl.displayClass('Sculpture');">Sculpture</button>
   <button type="button" ng-click="$ctrl.displayClass('Photographs');">Photographs</button>
-  <button type="button" ng-click="$ctrl.displayClass('StainedGlass');">Stained Glass</button>
+  <button type="button" ng-click="$ctrl.displayClass('Textile Arts');">Textile Arts</button>
+  <button type="button" ng-click="$ctrl.displayClass('Manuscripts');">Manuscripts</button>
 
 
   <div ng-repeat="item in $ctrl.classList track by $index" ng-show="item.images[1]">
