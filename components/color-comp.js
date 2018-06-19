@@ -9,8 +9,6 @@ const colorComponent = {
   <button type="button" ng-click="$ctrl.displayClass('Coins');">Coins</button>
 
 
-  <button type="button" ng-click="$ctrl.allMediums();">All Mediums</button>
-
   <div ng-repeat="item in $ctrl.classList track by $index" ng-show="item.images[1]">
     <h3>{{ item.title }}</h3>
     <img ng-src="{{item.images[0].baseimageurl}}">
@@ -29,21 +27,6 @@ const colorComponent = {
       }
       })
     } 
-    vm.displayMedium = function (medType) {
-      vm.mediumList = [];
-      TestService.getMedium(medType).then((response) => {
-        vm.medInfo = response;
-        for (let i= 0; i < 15; i++) {
-          vm.mediumList.push(response.data.records[i]);
-          console.log(response.data.records[i]);
-        }
-        })
-      } 
-      vm.allMediums = function () {
-        TestService.getAllMediums().then((response) => {
-          console.log(response);
-        })
-      }
   }]
 }
 
