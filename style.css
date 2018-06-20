@@ -26,6 +26,7 @@ header {
     justify-content: center;
     margin-bottom: 5px;
     text-transform: uppercase;
+    padding: 12px; 
 }
 .logo {
     width: 100px;
@@ -68,8 +69,10 @@ header {
 
 .colorlink, .typelink, .culturelink {
     display: flex;
+    justify-content: center;
+    text-align: center;
     position: relative;
-    width: 340px;
+    /* width: 340px; */
 }
 
 .colorlink p, .typelink p, .culturelink p {
@@ -93,7 +96,6 @@ a:visited {
 
 
 .colorimage, .typeimage, .cultureimage {
-    display: flex;
     width: 70%;
     margin:0 auto;
     height: 50px;
@@ -119,6 +121,10 @@ button {
   justify-content: center;
 }
 
+@media only screen and(min-width:426px) {
+  
+}
+
 @media only screen and (min-width: 768px){
 
   .image {
@@ -141,6 +147,7 @@ button {
     align-items: center;
     justify-content: center;
   }
+
   .text-wrapper {
     font-size: 1.2rem;
   }
@@ -167,3 +174,6 @@ button {
 
 
 }
+
+
+/* color-link width: 100% */
