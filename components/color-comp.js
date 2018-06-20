@@ -2,17 +2,18 @@
 
 const colorComponent = {
   template: `
-  <button type="button" ng-click="$ctrl.displayColor('Red');">Red</button>
-  <button type="button" ng-click="$ctrl.displayColor('Orange');">Orange</button>
-  <button type="button" ng-click="$ctrl.displayColor('Yellow');">Yellow</button>
-  <button type="button" ng-click="$ctrl.displayColor('Green');">Green</button>
-  <button type="button" ng-click="$ctrl.displayColor('Blue');">Blue</button>
-  <button type="button" ng-click="$ctrl.displayColor('Violet');">Violet</button>
-  <button type="button" ng-click="$ctrl.displayColor('Black');">Black</button>
-  <button type="button" ng-click="$ctrl.displayColor('White');">White</button>
-  <button type="button" ng-click="$ctrl.displayColor('Brown');">Brown</button>
-  <button type="button" ng-click="$ctrl.displayColor('Grey');">Grey</button>
-
+  <section class="buttoncontainer">
+    <button type="button" ng-click="$ctrl.displayColor('Red');">Red</button>
+    <button type="button" ng-click="$ctrl.displayColor('Orange');">Orange</button>
+    <button type="button" ng-click="$ctrl.displayColor('Yellow');">Yellow</button>
+    <button type="button" ng-click="$ctrl.displayColor('Green');">Green</button>
+    <button type="button" ng-click="$ctrl.displayColor('Blue');">Blue</button>
+    <button type="button" ng-click="$ctrl.displayColor('Violet');">Violet</button>
+    <button type="button" ng-click="$ctrl.displayColor('Black');">Black</button>
+    <button type="button" ng-click="$ctrl.displayColor('White');">White</button>
+    <button type="button" ng-click="$ctrl.displayColor('Brown');">Brown</button>
+    <button type="button" ng-click="$ctrl.displayColor('Grey');">Grey</button>
+  </section>
 
   <div ng-repeat="item in $ctrl.colorList track by $index" ng-show="item.colorcount[1]">
     <h3>{{ item.title }}</h3>
@@ -24,6 +25,9 @@ const colorComponent = {
     vm.displayColor = function (colorType) {
       vm.colorList = [];
       TestService.getColor(colorType).then((response) => {
+        for(let i = 0; i < 10; i ++) {
+          vm.colorList.push(response.data.colors.hue); 
+        }
         console.log(colorList.colors[j]);
       });
     }

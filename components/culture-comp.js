@@ -2,6 +2,7 @@
 
 const cultureComponent = {
     template: `
+    <section class="buttoncontainer">
         <button type="button" ng-click="$ctrl.displayCulture('American');">American</button>
         <button type="button" ng-click="$ctrl.displayCulture('Korean');">Korean</button>
         <button type="button" ng-click="$ctrl.displayCulture('Egyptian');">Egyptian</button>
@@ -10,7 +11,7 @@ const cultureComponent = {
         <button type="button" ng-click="$ctrl.displayCulture('Japanese');">Japanese</button>
         <button type="button" ng-click="$ctrl.displayCulture('Spanish');">Spanish</button>
         <button type="button" ng-click="$ctrl.displayCulture('Flemish');">Flemish</button>
-
+    </section>
 
         <div ng-repeat="item in $ctrl.cultureList track by $index" ng-show="item.images[1]">
             <h3>{{ item.title }}</h3>
