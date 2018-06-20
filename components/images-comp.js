@@ -1,5 +1,5 @@
 "use strict";
-
+console.log("image comp here"); 
 const imagesComponent = {
   template: `
 
@@ -7,9 +7,11 @@ const imagesComponent = {
     <img ng-src="https://ids.lib.harvard.edu/ids/view/{{item.images[0].idsid}}">
     <p>{{ item.title }}</p>
     <p>{{ item.period }}</p>
-    <p>{{ item.department }}</p>
-    <p>{{ item.accessionyear }}</p>
+    <p>{{ item.department }} </p>
+    <p> {{ item.accessionyear }} </p>
     <p> {{ item.medium }} </p> 
+    <p> {{ item.division }} </p> 
+    <p> {{ item.description}} </p> 
   </div>
 
   `,

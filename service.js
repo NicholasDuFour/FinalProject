@@ -45,10 +45,10 @@ function TestService($http) {
     })
   }
 
-  const getColor = (colorType) => {
+  const getColor = () => {
     return $http({
       method: 'GET',
-      url:`https://api.harvardartmuseums.org/object?hasimage=${colorType}&size=100&page=4&apikey=${key}`
+      url:`https://api.harvardartmuseums.org/object?size=100&page=4&apikey=${key}`
     }).then((response) => {
       colorList = response; 
       console.log(response); 
