@@ -26,6 +26,7 @@ header {
     justify-content: center;
     margin-bottom: 5px;
     text-transform: uppercase;
+    padding: 12px;
 }
 .logo {
     width: 100px;
@@ -119,6 +120,10 @@ button {
   justify-content: center;
 }
 
+/* @media only screen and (min-width: 426px) {
+   
+} */
+
 @media only screen and (min-width: 768px){
 
   .image {
@@ -159,11 +164,6 @@ button {
   .colorlink p, .typelink p, .culturelink p {
     position: static;
   }
-
-
-}
-
-@media only screen and (min-width: 768px){
 
 
 }

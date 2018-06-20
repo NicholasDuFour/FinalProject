@@ -18,6 +18,8 @@ const colorComponent = {
   <div ng-repeat="item in $ctrl.colorList track by $index" ng-show="item.colorcount[1]">
     <h3>{{ item.title }}</h3>
     <img ng-src="{{item.images[0].baseimageurl}}">
+    <p> {{ item.division }} </p> 
+    <p> {{ item.description}} </p> 
   </div>
   `,
   controller: ["TestService", function(TestService){
