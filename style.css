@@ -26,6 +26,7 @@ header {
     justify-content: center;
     margin-bottom: 5px;
     text-transform: uppercase;
+    padding: 12px; 
 }
 .logo {
     width: 100px;
@@ -47,7 +48,14 @@ header {
     border-radius: 5px;
 }
 
-.text-wrapper{
+.text-flex {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-wrapper {
     text-align: center;
     width: 70%;
     height: 6%;
@@ -61,8 +69,10 @@ header {
 
 .colorlink, .typelink, .culturelink {
     display: flex;
+    justify-content: center;
+    text-align: center;
     position: relative;
-    width: 340px;
+    /* width: 340px; */
 }
 
 .colorlink p, .typelink p, .culturelink p {
@@ -86,7 +96,6 @@ a:visited {
 
 
 .colorimage, .typeimage, .cultureimage {
-    display: flex;
     width: 70%;
     margin:0 auto;
     height: 50px;
@@ -112,6 +121,10 @@ button {
   justify-content: center;
 }
 
+@media only screen and(min-width:426px) {
+  
+}
+
 @media only screen and (min-width: 768px){
 
   .image {
@@ -126,6 +139,13 @@ button {
 
   .logo {
     margin-left: -30px;
+  }
+
+  .text-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   .text-wrapper {
@@ -149,3 +169,11 @@ button {
 
 
 }
+
+@media only screen and (min-width: 768px){
+
+
+}
+
+
+/* color-link width: 100% */
