@@ -6,8 +6,9 @@ const homeComponent = {
     <div class="container">
         <img class="image" src="images/igor-miske-177849-unsplash.jpg" alt="museum">
     </div>
-    <div class="text-wrapper">The Art of Discovery</div>
-
+    <section class="text-flex">
+        <div class="text-wrapper">The Art of Discovery</div>
+    </section>
     <section class="colorlink">
         <a href="#!/color-comp"><p>color</p><img class="colorimage" src="images/steve-johnson.jpg"></a>
     </section>

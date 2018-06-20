@@ -47,7 +47,14 @@ header {
     border-radius: 5px;
 }
 
-.text-wrapper{
+.text-flex {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-wrapper {
     text-align: center;
     width: 70%;
     height: 6%;
@@ -128,6 +135,12 @@ button {
     margin-left: -30px;
   }
 
+  .text-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
   .text-wrapper {
     font-size: 1.2rem;
   }
@@ -146,6 +159,11 @@ button {
   .colorlink p, .typelink p, .culturelink p {
     position: static;
   }
+
+
+}
+
+@media only screen and (min-width: 768px){
 
 
 }
