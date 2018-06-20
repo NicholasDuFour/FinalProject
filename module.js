@@ -5,9 +5,9 @@ angular
     .module("app", ["ngRoute"])
     .config(function($routeProvider) {
         $routeProvider
-        .when("/images-comp", {
+        .when("/home-comp", {
             template: `
-            <images-component></images-component>
+            <home-component></home-component>
              `
         })
         .when("/color-comp", {
@@ -20,10 +20,16 @@ angular
             <culture-component></culture-component>
              `
         })
+        .when("/images-comp", {
+            template: `
+            <images-component></images-component>
+             `
+        })
         .when("/type-comp", {
             template: `
             <type-component></type-component>
              `
         })
+        .otherwise({ redirectTo: "/home-comp"});
     })
 

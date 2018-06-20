@@ -22,16 +22,42 @@ const colorComponent = {
   `,
   controller: ["TestService", function(TestService){
     const vm = this; 
-    vm.displayColor = function (colorType) {
-      vm.colorList = [];
-      TestService.getColor(colorType).then((response) => {
-        for(let i = 0; i < 10; i ++) {
-          vm.colorList.push(response.data.colors.hue); 
-        }
-        console.log(colorList.colors[j]);
-      });
-    }
-  }]
+    vm.colorList = [];
+//     vm.displayColor = function () {
+//       TestService.getColor().then((response) => {
+//         for( let i = 0; i > response.data.records[i].colors; i ++) {
+//           let innerArray = response.data.records[i].colors[i]; 
+//           for(let j = 0; j > innerArray.length; j ++) {
+//             let newValue = innerArray[j]; 
+//             vm.newValue.push(colorList.colors[j]);
+//             console.log(newValue); 
+//           }
+//         }
+//       });
+//     }
+//   }]
+// }
+vm.displayColor = function () {
+  TestService.getColor().then((response) => {
+    for( let i = 0; i > response.data.records[i].colors.length; i ++) {
+      let innerArray = response.data.records[i].colors[i].hue; 
+      if (response.data.records[i].colors[i].hue === "Red") 
+        vm.innerArray.push(colorList.colors[i]);
+        console.log(innerArray); 
+      }
+    });
+  }
+}]
+  //   vm.displayColor = function (colorType) {
+  //     vm.colorList = [];
+  //     TestService.getColor(colorType).then((response) => {
+  //       for(let i = 0; i < 10; i ++) {
+  //         vm.colorList.push(response.data.colors.hue); 
+  //       }
+  //       console.log(colorList.colors[i]);
+  //     });
+  //   }
+  // }]
 }
 
 angular
@@ -40,8 +66,8 @@ angular
 
 
 // for (let j=0; j < 20; j++) {
-  //   if (response.data.records[i].colors[j].hue === "Red")
-  //   console.log(response.data.records[i]);
+    // if (response.data.records[i].colors[j].hue === "Red")
+    // console.log(response.data.records[i]);
 
 
 
@@ -50,3 +76,23 @@ angular
       //   for (let j = 0; j < 20; j++) {
       //   if (colorList.colors[j].hue === "Red")
       //     vm.colorList.push(colorList.colors[j]);
+      //   }
+      // }
+
+/* 
+        for(let i = 0; i < 10; i ++) {
+          // vm.colorList.push(response.data.colors[0].hue); 
+        }
+
+for (let i= 0; i < 20; i++) {
+          let colorList = response.data.records[i];
+          for (let j = 0; j < 20; j++) {
+          if (colorList.colors[j].hue === "Grey")
+            vm.colorList.push(colorList.colors[j]);
+            console.log(colorList.colors[j]);
+     }
+}
+
+
+
+*/
