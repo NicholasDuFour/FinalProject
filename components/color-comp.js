@@ -24,7 +24,7 @@ const colorComponent = {
     vm.displayColor = function (colorType) {
       vm.colorList = [];
       TestService.getColor(colorType).then((response) => {
-        console.log(colorList.colors[j]);
+        console.log(colorList.colors[i]);
       });
     }
   }]
