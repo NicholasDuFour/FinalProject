@@ -3,6 +3,10 @@
 const cultureComponent = {
     template: `
     <section class="buttoncontainer">
+
+    <button type="button" ng-click="$ctrl.nextPage();">Next Page</button>
+
+
         <button type="button" ng-click="$ctrl.displayCulture('American');">American</button>
         <button type="button" ng-click="$ctrl.displayCulture('Korean');">Korean</button>
         <button type="button" ng-click="$ctrl.displayCulture('Egyptian');">Egyptian</button>
@@ -24,12 +28,15 @@ const cultureComponent = {
         const vm = this; 
         vm.cultureList = [];
         // vm.material = (value) => { console.log(value) };
+        vm.nextPage = function () {
+            TestService.nextPage().then((response) => {
+            })
+          }
         vm.displayCulture = function (cultureType) {
         TestService.getCulture(cultureType).then((response) => {
             vm.cultureList = [];
             for (let i= 0; i < 100; i++) {
                 vm.cultureList.push(response.data.records[i]);
-            console.log(response.data.records[i]);        
             }
         })
 }
