@@ -48,6 +48,16 @@ vm.displayColor = function () {
     });
   }
 }]
+  //   vm.displayColor = function (colorType) {
+  //     vm.colorList = [];
+  //     TestService.getColor(colorType).then((response) => {
+  //       for(let i = 0; i < 10; i ++) {
+  //         vm.colorList.push(response.data.colors.hue); 
+  //       }
+  //       console.log(colorList.colors[i]);
+  //     });
+  //   }
+  // }]
 }
 
 angular
