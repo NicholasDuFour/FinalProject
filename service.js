@@ -55,6 +55,11 @@ function TestService($http) {
     })
   }
 
+  const returnClassificationCulture = () => {
+    cultureTest = cultureList; 
+    return cultureTest; 
+  }
+
   const getColor = () => {
     return $http({
       method: 'GET',

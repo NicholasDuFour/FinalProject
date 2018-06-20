@@ -10,7 +10,6 @@ const imagesComponent = {
     const vm = this; 
       vm.testItems = TestService.returnClassificationImages();
     
-
   }
 }
 
@@ -21,15 +20,6 @@ angular
 
 
   /*
-    <div ng-repeat="item in $ctrl.artList track by $index">
-    <img ng-src="https://ids.lib.harvard.edu/ids/view/{{item.images[0].idsid}}">
-    <p>{{ item.title }}</p>
-    <p>{{ item.period }}</p>
-    <p>{{ item.department }}</p>
-    <p>{{ item.accessionyear }}</p>
-    <p> {{ item.medium }} </p> 
-  </div>
-
     // controller: ["TestService", function (TestService){
   //   const vm = this;
   //   vm.artList = [];
