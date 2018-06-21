@@ -5,18 +5,19 @@ const imagesComponent = {
     <h3>{{ item.title }}</h3>
     <img ng-src="{{item.images[0].baseimageurl}}">
   </div>
+
   `,
   controller: function(TestService){
     const vm = this; 
       vm.testItems = TestService.returnClassificationImages();
-    
-  }
+  } 
+
 }
 
 
 angular
   .module("app")
-  .component("imagesComponent", imagesComponent)
+  .component("imagesComponent", imagesComponent); 
 
 
   /*
