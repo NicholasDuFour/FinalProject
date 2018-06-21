@@ -57,7 +57,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
 }
 
 .text-wrapper {
@@ -76,16 +76,15 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    position: relative;
-    /* width: 340px; */
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70%;
+    margin: 10px;
+    cursor: pointer;
 }
 
-.colorlink p, .typelink p, .culturelink p {
-  z-index: 3;
-  position: absolute;
-  top: -15px;
+.colorlink, .typelink, .culturelink {
   color: white;
-  left: 140px;
   font-size: 30px;
   text-shadow: 2px 2px 2px #424da8;
 }
@@ -101,8 +100,29 @@ a:link {
     margin:0 auto;
     height: 50px;
     margin-top: 20px;
-    z-index: 2;
     border-radius: 5px;
+}
+
+.colorlink {
+  background-image:url("images/steve-johnson.jpg");
+  background-repeat: no-repeat;
+}
+
+.typelink {
+  background-image:url("images/stainedglasswindow.jpg");
+  background-repeat: no-repeat;
+}
+
+.culturelink {
+  background-image:url("images/geishabowing.jpg");
+  background-repeat: no-repeat;
+}
+
+.mainbuttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
 }
 
 button {
@@ -160,10 +180,9 @@ button {
   }
 
   .colorlink, .typelink, .culturelink {
-    width: 415px;
-    position: static;
-    flex-direction: row;
-
+    /* width: 415px; */
+    /* position: static; */
+    /* flex-direction: row; */
   }
 
   .colorimage, .typeimage, .cultureimage {
@@ -172,6 +191,12 @@ button {
 
   .colorlink p, .typelink p, .culturelink p {
     position: static;
+  }
+
+  .mainbuttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
 
 

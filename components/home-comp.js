@@ -11,15 +11,18 @@ const homeComponent = {
         <p>search for art by...</p>
     </section>
 
-    <section class="colorlink">
-        <a href="#!/color-comp"><p>color</p><img class="colorimage" src="images/steve-johnson.jpg"></a>
-    </section>
-    <section class="typelink">
-        <a href="#!/type-comp"><p>type</p><img class="typeimage" src="images/stainedglasswindow.jpg"></a>
-    </section>
-    <section class="culturelink">
-        <a href="#!/culture-comp"><p>culture</p><img class="cultureimage" src="images/geishabowing.jpg"></a>
-    </section>
+<section class="mainbuttons">
+
+        <a href="#!/color-comp" class="colorlink">color</a>
+
+    
+        <a href="#!/type-comp" class="typelink">type</a>
+
+
+        <a href="#!/culture-comp" class="culturelink">culture</a>
+
+
+  </section>
     `,
 }
 
