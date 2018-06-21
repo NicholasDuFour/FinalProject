@@ -3,9 +3,6 @@
 const colorComponent = {
   template: `
   <section class="buttoncontainer">
-  <button type="button" ng-click="$ctrl.searchColorInfo();">ColorGetRequest</button>
-
-
   <button type="button" ng-click="$ctrl.nextColorPage();">Next Page</button>
 
     <button type="button" ng-click="$ctrl.colorFinder('Red');">Red</button>
