@@ -121,6 +121,13 @@ button {
   justify-content: center;
 }
 
+.ourimages {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+
+}
+
 @media only screen and(min-width:426px) {
   
 }

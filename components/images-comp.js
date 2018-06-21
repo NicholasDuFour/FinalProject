@@ -3,7 +3,7 @@ const imagesComponent = {
   template: `
   <div ng-repeat="item in $ctrl.testItems track by $index" ng-show="item.images[1]">
     <h3>{{ item.title }}</h3>
-    <img ng-src="{{item.images[0].baseimageurl}}">
+    <img class"ourimages" ng-src="{{item.images[0].baseimageurl}}">
   </div>
   `,
   controller: function(TestService){
