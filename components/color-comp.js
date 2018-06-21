@@ -53,9 +53,15 @@ const colorComponent = {
       TestService.nextColorPage().then((response) => {
         sortStuff(vm.tColor, response);
       })
-    }
+    };
+    vm.displayColorImage = function (colorImageType) {
+      TestService.getClassificationColorImage(colorImageType).then(() => {
+        $location.path("/color-image");
+      });
+    } 
   }]
 }
+ 
 
 
 angular

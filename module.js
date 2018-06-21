@@ -25,6 +25,11 @@ angular
             <culture-image></culture-image>
              `
         })
+        .when("/color-image", {
+            template: `
+            <color-image></color-image>
+             `
+        })
         .when("/type-comp", {
             template: `
             <type-component></type-component>
