@@ -26,11 +26,15 @@ header {
     margin-bottom: 5px;
     text-transform: uppercase;
     padding: 12px;
-    width: 100%; 
+    width: 100%;
 }
 
 #headerlink:visited {
     color: black;
+}
+
+h1 {
+  font-size: 45px;
 }
 
 .logo {
@@ -51,7 +55,7 @@ header {
     height: 55%;
     z-index: 1;
     border-radius: 5px;
-    margin-top: 5px; 
+    margin-top: 5px;
 }
 
 .text-flex {
@@ -63,7 +67,7 @@ header {
 
 .text-wrapper {
     text-align: center;
-    margin-top: 5px; 
+    margin-top: 5px;
     width: 70%;
     height: 6%;
     padding-bottom: 10px;
@@ -152,47 +156,40 @@ button {
 }
 
 @media only screen and(min-width:426px) {
-  .image {
-
-  }
-
-  header {
-
-  }
 
   .logo {
     margin-left: -30px;
   }
 }
-
+/*Tablet styles*/
 @media only screen and (min-width: 768px){
 
  .image {
     width: 90%;
-    margin-top: 5px;      
+    margin-top: 5px;
   }
 
   .logo {
     margin-left: -30px;
   }
 
+  header {
+    height: 65px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
   .text-flex {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
   }
 
   .text-wrapper {
     font-size: 1.2rem;
-    margin-top: 15px; 
-  }
-
-  .colorimage, .typeimage, .cultureimage {
-    flex-direction: row;
-  }
-
-  .colorlink p, .typelink p, .culturelink p {
-    position: static;
+    margin-top: 12px;
   }
 
   .mainbuttons {
@@ -201,16 +198,23 @@ button {
     justify-content: space-around;
   }
 
-
 }
-
+/*Desktop styles*/
 @media only screen and (min-width: 900px){
   .logo{
-    margin-left: -75px; 
+    margin-left: -75px;
   }
 
   .image {
     width: 55%;
+  }
+
+  .text-flex {
+    margin-bottom: -10px;
+  }
+
+  header {
+    height: 65px;
   }
 
 }

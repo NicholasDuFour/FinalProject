@@ -2,21 +2,9 @@
 const imagesComponent = {
   template: `
   <div ng-repeat="item in $ctrl.testItems track by $index" ng-show="item.images[1]">
-  <ui-carousel 
-  slides="ctrl.slides"
-  slides-to-show="3"
-  slides-to-scroll="1"
-  initial-slide="1"
-  autoplay="true"
-  autoplay-speed="2000">
- 
-  <carousel-item>
-  <h3>{{ item.title + 1 }}</h3>
-  <img ng-src="{{item.images[0].baseimageurl}}">
-</div>
-  </carousel-item>
-</ui-carousel>
-    
+    <h3>{{ item.title }}</h3>
+    <img ng-src="{{item.images[0].baseimageurl}}">
+  </div>
 
   `,
   controller: function(TestService){
@@ -28,7 +16,7 @@ const imagesComponent = {
 
 
 angular
-  .module("app",['ui.carousel'])
+  .module("app")
   .component("imagesComponent", imagesComponent); 
 
 

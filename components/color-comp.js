@@ -53,7 +53,7 @@ const colorComponent = {
       TestService.nextColorPage().then((response) => {
         sortStuff(vm.tColor, response);
       })
-    }; 
+    };
   }]
 }
  

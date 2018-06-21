@@ -2,7 +2,7 @@
 
 console.log("module!"); 
 angular
-    .module("app", ["ngRoute"], ['ui.carousel'])
+    .module("app", ["ngRoute"])
     .config(function($routeProvider) {
         $routeProvider
         .when("/home-comp", {
