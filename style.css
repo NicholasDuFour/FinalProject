@@ -15,7 +15,6 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Helvetica, Arial, sans-serif;
-    /* width: 100vw; */
 }
 
 header {
@@ -27,6 +26,7 @@ header {
     margin-bottom: 5px;
     text-transform: uppercase;
     padding: 12px;
+    width: 100%; 
 }
 
 #headerlink:visited {
@@ -51,6 +51,7 @@ header {
     height: 55%;
     z-index: 1;
     border-radius: 5px;
+    margin-top: 5px; 
 }
 
 .text-flex {
@@ -62,6 +63,7 @@ header {
 
 .text-wrapper {
     text-align: center;
+    margin-top: 5px; 
     width: 70%;
     height: 6%;
     padding-bottom: 10px;
@@ -114,7 +116,7 @@ a:link {
 }
 
 .culturelink {
-  background-image:url("images/laterns.jpg");
+  background-image:url("images/lanterns.jpg");
   background-repeat: no-repeat;
 }
 
@@ -150,19 +152,24 @@ button {
 }
 
 @media only screen and(min-width:426px) {
+  .image {
 
+  }
+
+  header {
+
+  }
+
+  .logo {
+    margin-left: -30px;
+  }
 }
 
 @media only screen and (min-width: 768px){
 
-  .image {
-    height: 55%;
-    width: 55%;
-  }
-
-  .header {
-    width: 55%;
-    height: 50px;
+ .image {
+    width: 90%;
+    margin-top: 5px;      
   }
 
   .logo {
@@ -172,17 +179,12 @@ button {
   .text-flex {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
   }
 
   .text-wrapper {
     font-size: 1.2rem;
-  }
-
-  .colorlink, .typelink, .culturelink {
-    /* width: 415px; */
-    /* position: static; */
-    /* flex-direction: row; */
+    margin-top: 15px; 
   }
 
   .colorimage, .typeimage, .cultureimage {
@@ -202,10 +204,13 @@ button {
 
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 900px){
+  .logo{
+    margin-left: -75px; 
+  }
 
+  .image {
+    width: 55%;
+  }
 
 }
-
-
-/* color-link width: 100% */
