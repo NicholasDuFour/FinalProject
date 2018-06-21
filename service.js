@@ -65,7 +65,8 @@ function TestService($http) {
       method: 'GET',
       url: `https://api.harvardartmuseums.org/object?culture=${cultureType}&size=100&page=${page}&apikey=${key}`
     }).then((response)=>{
-      cultureList = response;
+      cultureList = response.data.records;
+      console.log(cultureList);
       return cultureList;
     })
   }

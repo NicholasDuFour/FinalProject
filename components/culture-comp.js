@@ -19,22 +19,31 @@ const cultureComponent = {
 
     controller: ["$location", "TestService", function($location,TestService){
         const vm = this; 
+            vm.displayCulture = function (cultureType) {
+              TestService.getCulture(cultureType).then(() => {
+                $location.path("/culture-image");
+              });
+            } 
+          }]
+        }
         // vm.cultureList = [];
         // vm.nextPage = function () {
         //     TestService.nextPage().then((response) => {
         //     })
         //   }
-        vm.displayCulture = function (cultureType) {
-        TestService.getCulture(cultureType).then((response) => {
-            vm.cultureList = [];
-            for (let i= 0; i < 100; i++) {
-                vm.cultureList.push(response.data.records[i]);
-            }
-            $location.path("/culture-image");
-        });
-      }
-   }]
-}
+
+//         const vm =this;
+//         vm.displayCulture = function (cultureType) {
+//         TestService.getCulture(cultureType).then((response) => {
+//             vm.cultureList = [];
+//             for (let i= 0; i < 100; i++) {
+//                 vm.cultureList.push(response.data.records[i]);
+//             }
+//             $location.path("/culture-image");
+//         });
+//       }
+//    }]
+// }
 
 
 
