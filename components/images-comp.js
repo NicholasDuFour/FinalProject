@@ -1,12 +1,9 @@
 "use strict";
 const imagesComponent = {
   template: `
-  <div ng-repeat="item in $ctrl.testItems track by $index" ng-show="item.images[1]">
+  <div class="typefiles" ng-repeat="item in $ctrl.testItems track by $index" ng-show="item.images[1]">
     <h3>{{ item.title }}</h3>
     <img ng-src="{{item.images[0].baseimageurl}}">
-  </div>
-
-  <div class="typefiles" style="background-image:url('{{ item.images[0].baseimageurl }}')">
   </div>
 
   `,
