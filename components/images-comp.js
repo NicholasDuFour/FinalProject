@@ -6,18 +6,21 @@ const imagesComponent = {
     <img ng-src="{{item.images[0].baseimageurl}}">
   </div>
 
+  <div class="typefiles" style="background-image:url('{{ item.images[0].baseimageurl }}')">
+  </div>
+
   `,
   controller: function(TestService){
-    const vm = this; 
+    const vm = this;
       vm.testItems = TestService.returnClassificationImages();
-  } 
+  }
 
 }
 
 
 angular
   .module("app")
-  .component("imagesComponent", imagesComponent); 
+  .component("imagesComponent", imagesComponent);
 
 
   /*
