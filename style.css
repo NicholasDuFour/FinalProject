@@ -15,7 +15,6 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Helvetica, Arial, sans-serif;
-    /* width: 100vw; */
 }
 
 header {
@@ -27,10 +26,15 @@ header {
     margin-bottom: 5px;
     text-transform: uppercase;
     padding: 12px;
+    width: 100%;
 }
 
 #headerlink:visited {
     color: black;
+}
+
+h1 {
+  font-size: 45px;
 }
 
 .logo {
@@ -51,17 +55,19 @@ header {
     height: 55%;
     z-index: 1;
     border-radius: 5px;
+    margin-top: 5px;
 }
 
 .text-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
 }
 
 .text-wrapper {
     text-align: center;
+    margin-top: 5px;
     width: 70%;
     height: 6%;
     padding-bottom: 10px;
@@ -76,16 +82,15 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    position: relative;
-    /* width: 340px; */
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70%;
+    margin: 10px;
+    cursor: pointer;
 }
 
-.colorlink p, .typelink p, .culturelink p {
-  z-index: 3;
-  position: absolute;
-  top: -15px;
+.colorlink, .typelink, .culturelink {
   color: white;
-  left: 140px;
   font-size: 30px;
   text-shadow: 2px 2px 2px #424da8;
 }
@@ -101,8 +106,29 @@ a:link {
     margin:0 auto;
     height: 50px;
     margin-top: 20px;
-    z-index: 2;
     border-radius: 5px;
+}
+
+.colorlink {
+  background-image:url("images/paint.jpg");
+  background-repeat: no-repeat;
+}
+
+.typelink {
+  background-image:url("images/glass.jpg");
+  background-repeat: no-repeat;
+}
+
+.culturelink {
+  background-image:url("images/lanterns.jpg");
+  background-repeat: no-repeat;
+}
+
+.mainbuttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
 }
 
 button {
@@ -131,22 +157,28 @@ button {
 
 @media only screen and(min-width:426px) {
 
+  .logo {
+    margin-left: -30px;
+  }
 }
-
+/*Tablet styles*/
 @media only screen and (min-width: 768px){
 
-  .image {
-    height: 55%;
-    width: 55%;
-  }
-
-  .header {
-    width: 55%;
-    height: 50px;
+ .image {
+    width: 90%;
+    margin-top: 5px;
   }
 
   .logo {
     margin-left: -30px;
+  }
+
+  header {
+    height: 65px;
+  }
+
+  h1 {
+    font-size: 50px;
   }
 
   .text-flex {
@@ -157,30 +189,32 @@ button {
 
   .text-wrapper {
     font-size: 1.2rem;
+    margin-top: 12px;
   }
 
-  .colorlink, .typelink, .culturelink {
-    width: 415px;
-    position: static;
+  .mainbuttons {
     flex-direction: row;
-
+    align-items: center;
+    justify-content: space-around;
   }
-
-  .colorimage, .typeimage, .cultureimage {
-    flex-direction: row;
-  }
-
-  .colorlink p, .typelink p, .culturelink p {
-    position: static;
-  }
-
 
 }
+/*Desktop styles*/
+@media only screen and (min-width: 900px){
+  .logo{
+    margin-left: -75px;
+  }
 
-@media only screen and (min-width: 768px){
+  .image {
+    width: 55%;
+  }
 
+  .text-flex {
+    margin-bottom: -10px;
+  }
+
+  header {
+    height: 65px;
+  }
 
 }
-
-
-/* color-link width: 100% */
