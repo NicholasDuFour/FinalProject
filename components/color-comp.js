@@ -3,6 +3,9 @@
 const colorComponent = {
   template: `
   <section class="buttoncontainer">
+  <button type="button" ng-click="$ctrl.searchColorInfo();">ColorGetRequest</button>
+
+
   <button type="button" ng-click="$ctrl.nextColorPage();">Next Page</button>
 
     <button type="button" ng-click="$ctrl.colorFinder('Red');">Red</button>
@@ -15,48 +18,33 @@ const colorComponent = {
     <button type="button" ng-click="$ctrl.colorFinder('White');">White</button>
     <button type="button" ng-click="$ctrl.colorFinder('Brown');">Brown</button>
     <button type="button" ng-click="$ctrl.colorFinder('Grey');">Grey</button>
-  </section>
-
-
-  <div ng-repeat="item in $ctrl.colorList track by $index" ng-show="item.images[1]">
-    <h3>{{ item.title }}</h3>
-    <img ng-src="{{item.images[0].baseimageurl}}">
-    <p> {{ item.division }} </p> 
-    <p> {{ item.description}} </p> 
-  </div>
+  </section> 
   `,
-  controller: ["TestService", function(TestService){
+  controller: ["$location", "TestService", function($location, TestService){
     const vm = this; 
     vm.colorList = [];
-    const sortStuff = (colorType, response) => {
-      let everyObject = response.data.records;
-        for (let prop1 of everyObject) {
-          if (prop1.hasOwnProperty('colors')) {
-            for (let prop2 of prop1.colors) {
-              if (prop2["hue"] === colorType) {
-                vm.colorList.push(prop1);
-              }   
-            }
-          }
-        }
-        console.log(vm.colorList);
+    const sortArtObject = (colorType, response) => {
     };
-    vm.tColor = null;
-      vm.colorFinder = function (colorType) {
-        vm.tColor = colorType;
-      TestService.getColor().then((response) => {
-        sortStuff(colorType, response);
-      })
+    vm.testColor = null;
+    vm.colorFinder = function (colorType) {
+      vm.testColor = colorType;
+      TestService.getColor(colorType).then((response) => {
+        vm.coolStuff = response;
+        $location.path("/color-image-comp");
+
+      });
     };
     vm.nextColorPage = function () {
       vm.colorList = [];
       TestService.nextColorPage().then((response) => {
-        sortStuff(vm.tColor, response);
+        sortArtObject(vm.testColor, response);
       })
-    };
+    }
+
   }]
 }
  
+
 
 
 angular

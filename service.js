@@ -1,10 +1,13 @@
 "use strict";
 
-function TestService($http) {
-  let colorList = []; 
+function TestService($http, $q) {
+  let colorList; 
   let classList = [];
   let cultureList = []; 
   let test;
+  let finalColorArray;
+  let noDuplicateColorsArray = [];
+  let output = []; 
   let cultureTest; 
   let page = 1;
   let key = "88bb71d0-7015-11e8-9d38-6fd658e729d6"; 
@@ -22,24 +25,48 @@ function TestService($http) {
     })
   }
 
+  const getColor = (colorType) => {
+    colorList = [];
+    return $q((resolve, reject) => {
+      for (let i = 1; i <= 200; i++) {
+        $http({
+          method: 'GET',
+          url: `https://api.harvardartmuseums.org/object?size=100&page=${i}&apikey=${key}`
+        }).then((response) => {
+          for (let itemInArr of response.data.records) {
+            if (itemInArr.hasOwnProperty("colors") && itemInArr.hasOwnProperty("images")) { 
+              if (itemInArr.images[0].height > 0 ) {
+                for (let color of itemInArr.colors) {
+                  if (color.hue === colorType) {
+                    // console.log(`WE FOUND ${colorType}`);
+                    colorList.push(itemInArr);
+                    console.log(colorList);
+                    return colorList
+                    }
+              }
+            }
 
-// This is what we are using to access the complete object of each art piece & access colors
+          }
+        };
+      })
+      resolve(colorList);
+    }
+  })
 
-  const getColor = (colorType) =>{
-    return $http({
-      method: 'GET',
-      url: `https://api.harvardartmuseums.org/object?size=100&page=${page}&apikey=${key}`
-    }).then((response)=>{
-      page++;
-      colorList = response;
-      return colorList;
-    })
-  }
+ 
+}
 
-// This is what we are using to access different classes/types of art
+const returnColorList = () => {
+    finalColorArray = colorList;
+    
+    return finalColorArray;
+}
+
+
+
+
 
   const getClassification = (classType) => {
-    
     return $http({
       method: 'GET',
       url: `https://api.harvardartmuseums.org/object?classification=${classType}&size=100&page=${page}&apikey=${key}`
@@ -49,7 +76,6 @@ function TestService($http) {
       console.log(classList);
       return classList
     })
-    
   }
 
   const returnClassificationImages = () => {
@@ -57,8 +83,6 @@ function TestService($http) {
     console.log(test);
     return test;
   }
-
-  // This is what we are using to access different cultures
 
   const getCulture = (cultureType) => {
     return $http({
@@ -76,6 +100,28 @@ function TestService($http) {
     console.log(cultureTest); 
     return cultureTest; 
   }
+<<<<<<< HEAD
+=======
+  const getClassificationColorImage = (colorImageType) => {
+    
+    return $http({
+      method: 'GET',
+      url: `https://api.harvardartmuseums.org/object?classification=${colorImageType}&size=100&page=${page}&apikey=${key}`
+    }).then((response)=>{
+      //console.log(response); 
+      colorImageList = response.data.records;
+      console.log(colorImageList);
+      return colorImageList
+    })
+    
+  }
+
+  const returnClassificationColorImage = () => {
+    colorImageTest = colorImageList;
+    console.log(colorImageTest);
+    return colorImageTest;
+  }
+>>>>>>> 1df4fbc91890ce1c05587d5d47a4abbda3fdaa5d
 
   return {
     nextColorPage,
@@ -83,8 +129,13 @@ function TestService($http) {
     returnClassificationImages, 
     getCulture,  
     returnClassificationCulture,
+<<<<<<< HEAD
     getColor 
 
+=======
+    getColor,
+    returnColorList
+>>>>>>> 1df4fbc91890ce1c05587d5d47a4abbda3fdaa5d
   }
 }
 
