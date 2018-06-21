@@ -1,12 +1,14 @@
 "use strict";
 
 function TestService($http) {
-  let cultureList = []; 
-  let classList = [];
   let colorList = []; 
+  let classList = [];
+  let cultureList = []; 
   let test;
+  let cultureTest; 
   let page = 1;
   let key = "88bb71d0-7015-11e8-9d38-6fd658e729d6"; 
+
 
   const nextColorPage = () => {
     return $http({
@@ -70,6 +72,7 @@ function TestService($http) {
 
   const returnClassificationCulture = () => {
     cultureTest = cultureList; 
+    console.log(cultureTest); 
     return cultureTest; 
   }
 

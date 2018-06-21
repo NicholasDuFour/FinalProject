@@ -4,9 +4,7 @@ const cultureComponent = {
     template: `
     <section class="buttoncontainer">
 
-    <button type="button" ng-click="$ctrl.nextPage();">Next Page</button>
-
-
+      <button type="button" ng-click="$ctrl.nextPage();">Next Page</button>
         <button type="button" ng-click="$ctrl.displayCulture('American');">American</button>
         <button type="button" ng-click="$ctrl.displayCulture('Korean');">Korean</button>
         <button type="button" ng-click="$ctrl.displayCulture('Egyptian');">Egyptian</button>
@@ -17,31 +15,25 @@ const cultureComponent = {
         <button type="button" ng-click="$ctrl.displayCulture('Flemish');">Flemish</button>
     </section>
 
-        <div ng-repeat="item in $ctrl.cultureList track by $index" ng-show="item.images[1]">
-            <h3>{{ item.title }}</h3>
-            <img ng-src="https://ids.lib.harvard.edu/ids/view/{{item.images[0].idsid}}">
-        </div>
-
     `, 
 
-    controller: ["TestService", function(TestService){
+    controller: ["$location", "TestService", function($location,TestService){
         const vm = this; 
-        vm.cultureList = [];
-        // vm.material = (value) => { console.log(value) };
-        vm.nextPage = function () {
-            TestService.nextPage().then((response) => {
-            })
-          }
+        // vm.cultureList = [];
+        // vm.nextPage = function () {
+        //     TestService.nextPage().then((response) => {
+        //     })
+        //   }
         vm.displayCulture = function (cultureType) {
         TestService.getCulture(cultureType).then((response) => {
             vm.cultureList = [];
             for (let i= 0; i < 100; i++) {
                 vm.cultureList.push(response.data.records[i]);
             }
-        })
-}
-    }]
-
+            $location.path("/culture-image");
+        });
+      }
+   }]
 }
 
 
@@ -50,3 +42,4 @@ angular
     .module("app")
     .component("cultureComponent", cultureComponent); 
 
+ // vm.material = (value) => { console.log(value) };

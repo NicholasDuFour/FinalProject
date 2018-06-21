@@ -20,14 +20,19 @@ angular
             <culture-component></culture-component>
              `
         })
-        .when("/images-comp", {
+        .when("/culture-image", {
             template: `
-            <images-component></images-component>
+            <culture-image></culture-image>
              `
         })
         .when("/type-comp", {
             template: `
             <type-component></type-component>
+             `
+        })
+        .when("/images-comp", {
+            template: `
+            <images-component></images-component>
              `
         })
         .otherwise({ redirectTo: "/home-comp"});
