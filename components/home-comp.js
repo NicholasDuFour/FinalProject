@@ -1,13 +1,14 @@
-"use strict"; 
-console.log("home comp!"); 
+"use strict";
+console.log("home comp!");
 
 const homeComponent = {
-    template: `   
+    template: `
     <div class="container">
         <img class="image" src="images/igor-miske-177849-unsplash.jpg" alt="museum">
     </div>
     <section class="text-flex">
         <div class="text-wrapper">The Art of Discovery</div>
+        <p>search for art by...</p>
     </section>
 
     <section class="colorlink">
@@ -19,12 +20,11 @@ const homeComponent = {
     <section class="culturelink">
         <a href="#!/culture-comp"><p>culture</p><img class="cultureimage" src="images/geishabowing.jpg"></a>
     </section>
-    `, 
+    `,
 }
 
 
 
-angular 
+angular
 .module("app")
-.component("homeComponent", homeComponent); 
-
+.component("homeComponent", homeComponent);
