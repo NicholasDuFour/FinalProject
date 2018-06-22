@@ -4,7 +4,6 @@ const cultureComponent = {
     template: `
     <section class="buttoncontainer">
 
-      <button type="button" ng-click="$ctrl.nextPage();">Next Page</button>
         <button type="button" ng-click="$ctrl.displayCulture('American');">American</button>
         <button type="button" ng-click="$ctrl.displayCulture('Korean');">Korean</button>
         <button type="button" ng-click="$ctrl.displayCulture('Egyptian');">Egyptian</button>
