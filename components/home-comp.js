@@ -11,7 +11,12 @@ const homeComponent = {
         <p>search for art by...</p>
     </section>
 
-<section class="mainbuttons">
+<section class="buttoncontainer">
+    <a href="#!/color-comp" div class="imagebuttoncontainer"</a>
+        <img src="images/america.jpg" alt="Flag">
+    <div class="imagebuttonoverlay"><p>color</p></div>
+    </div>
+
 
         <a href="#!/color-comp" class="colorlink">color</a>
 
