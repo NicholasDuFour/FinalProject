@@ -2,13 +2,9 @@
 
 const cultureComponent = {
     template: `
-    <div class="americancontainer" ng-click="$ctrl.displayCulture('American');">
+    <div class="imagebuttoncontainer" ng-click="$ctrl.displayCulture('American');">
         <img src="images/americanflag.jpg" alt="Flag">
-        <div class="americanoverlay"><p>American</p></div>
-    </div>
-    <div class="egyptiancontainer" ng-click="$ctrl.displayCulture('Egyptian');">
-        <img src="images/americanflag.jpg" alt="Flag">
-        <div class="americanoverlay"><p>American</p></div>
+        <div class="imagebuttonoverlay "><p>American</p></div>
     </div>
         <button type="button" class="egyptian" ng-click="$ctrl.displayCulture('Egyptian');">Egyptian</button>
         <button type="button" class=" flemish" ng-click="$ctrl.displayCulture('Flemish');">Flemish</button>

@@ -1,9 +1,28 @@
 const typeComponent = {
   template: `
   <section class="buttoncontainer">
-  <button type="button" class="albums" ng-click="$ctrl.displayClass('Albums');">Albums</button>
-    <button type="button" class="books" ng-click="$ctrl.displayClass('Books');">Books</button>
-    <button type="button" class="calligraphy" ng-click="$ctrl.displayClass('Calligraphy');">Calligraphy</button>
+  <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Albums');">
+    <img src="images/album.jpg" alt="Album">
+    <div class="imagebuttonoverlay"><p>Albums</p></div>
+  </div>
+
+  <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Books');">
+    <img src="images/books.jpg" alt="Books">
+    <div class="imagebuttonoverlay"><p>Books</p></div>
+  </div>
+
+  <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Calligraphy');">
+    <img src="images/calligraphy.jpg" alt="Calligraphy">
+    <div class="imagebuttonoverlay"><p>Calligraphy</p></div>
+  </div>
+
+  <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Jewelry');">
+    <img src="images/calligraphy.jpg" alt="Calligraphy">
+    <div class="imagebuttonoverlay"><p>Calligraphy</p></div>
+  </div>
+
+  
+
     <button type="button" class="jewelry" ng-click="$ctrl.displayClass('Jewelry');">Jewelry</button>
     <button type="button" class="lighting" ng-click="$ctrl.displayClass('Lighting Devices');">Lighting Devices</button>
     <button type="button" class="multiples" ng-click="$ctrl.displayClass('Multiples');">Multiples</button>
