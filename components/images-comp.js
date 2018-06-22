@@ -1,23 +1,23 @@
 "use strict";
 const imagesComponent = {
   template: `
-  <div ng-repeat="item in $ctrl.testItems track by $index" ng-show="item.images[1]">
+  <div class="typefiles" ng-repeat="item in $ctrl.testItems track by $index" ng-show="item.images[1]">
     <h3>{{ item.title }}</h3>
     <img ng-src="{{item.images[0].baseimageurl}}">
   </div>
 
   `,
   controller: function(TestService){
-    const vm = this; 
+    const vm = this;
       vm.testItems = TestService.returnClassificationImages();
-  } 
+  }
 
 }
 
 
 angular
   .module("app")
-  .component("imagesComponent", imagesComponent); 
+  .component("imagesComponent", imagesComponent);
 
 
   /*
