@@ -4,16 +4,16 @@ const colorComponent = {
   template: `
   <section class="buttoncontainer">
 
-    <button type="button" ng-click="$ctrl.colorFinder('Red');">Red</button>
-    <button type="button" ng-click="$ctrl.colorFinder('Orange');">Orange</button>
-    <button type="button" ng-click="$ctrl.colorFinder('Yellow');">Yellow</button>
-    <button type="button" ng-click="$ctrl.colorFinder('Green');">Green</button>
-    <button type="button" ng-click="$ctrl.colorFinder('Blue');">Blue</button>
-    <button type="button" ng-click="$ctrl.colorFinder('Violet');">Violet</button>
-    <button type="button" ng-click="$ctrl.colorFinder('Black');">Black</button>
-    <button type="button" ng-click="$ctrl.colorFinder('White');">White</button>
-    <button type="button" ng-click="$ctrl.colorFinder('Brown');">Brown</button>
-    <button type="button" ng-click="$ctrl.colorFinder('Grey');">Grey</button>
+    <button type="button" class="red" ng-click="$ctrl.colorFinder('Red');">Red</button>
+    <button type="button" class="orange" ng-click="$ctrl.colorFinder('Orange');">Orange</button>
+    <button type="button" class="yellow" ng-click="$ctrl.colorFinder('Yellow');">Yellow</button>
+    <button type="button" class="green" ng-click="$ctrl.colorFinder('Green');">Green</button>
+    <button type="button" class="blue" ng-click="$ctrl.colorFinder('Blue');">Blue</button>
+    <button type="button" class="violet" ng-click="$ctrl.colorFinder('Violet');">Violet</button>
+    <button type="button" class="black" ng-click="$ctrl.colorFinder('Black');">Black</button>
+    <button type="button" class="white" ng-click="$ctrl.colorFinder('White');">White</button>
+    <button type="button" class= "brown" ng-click="$ctrl.colorFinder('Brown');">Brown</button>
+    <button type="button" class="grey" ng-click="$ctrl.colorFinder('Grey');">Grey</button>
   </section> 
   `,
   controller: ["$location", "TestService", function($location, TestService){
