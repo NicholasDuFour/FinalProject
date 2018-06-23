@@ -13,20 +13,19 @@ const homeComponent = {
 
 <section class="buttoncontainer">
     <a href="#!/color-comp" div class="imagebuttoncontainer"</a>
-        <img src="images/lotsofcolors.jpg" alt="Paint">
+        <img src="images/colors.jpg" alt="Paint">
     <div class="imagebuttonoverlay"><p>color</p></div>
     </div>
     <a href="#!/type-comp" div class="imagebuttoncontainer"</a>
-        <img src="images/stained.jpg" alt="Stained Glass">
+        <img src="images/stained-glass.jpg" alt="Stained Glass">
     <div class="imagebuttonoverlay"><p>type</p></div>
     </div>
     <a href="#!/culture-comp" div class="imagebuttoncontainer"</a>
-        <img src="images/lantern.jpg" alt="Lanterns">
+        <img src="images/redlanterns.jpg" alt="Lanterns">
     <div class="imagebuttonoverlay"><p>culture</p></div>
     </div>
-
-
 </section>
+
     `,
 }
 
@@ -35,3 +34,20 @@ const homeComponent = {
 angular
 .module("app")
 .component("homeComponent", homeComponent);
+
+/* 
+<section class="mainbuttons">
+
+
+        <a href="#!/color-comp" class="colorlink">color</a>
+
+    
+        <a href="#!/type-comp" class="typelink">type</a>
+
+
+        <a href="#!/culture-comp" class="culturelink">culture</a>
+
+
+  </section>
+
+*/ 
