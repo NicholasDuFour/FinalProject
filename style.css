@@ -130,6 +130,8 @@ button {
   border-radius: 5px;
   width: 135px;
   font-size: 14px;
+  cursor: pointer;
+  outline: none;
 }
 
 .buttoncontainer {
@@ -155,15 +157,12 @@ button {
   height: 0 auto;
 }
 
-.typefiles h3 {
-  font-size: 22px;
-}
 
 .typefiles img {
-  display: flex; 
-  justify-content: center; 
-  width: 60%; 
-  height: auto; 
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: auto;
 }
 .imagebuttoncontainer {
   position: relative;
@@ -194,6 +193,24 @@ button {
   text-align: center;
   width: 100%;
 
+}
+
+.moreinfo {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 15px;
+  width: 500px;
+}
+
+.moreinfo h4 {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.closebtn {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
 }
 
 
@@ -248,12 +265,12 @@ button {
     width: 100%;
     height: 0 auto;
   }
-  
+
   .typefiles img {
-    display: flex; 
-    justify-content: center; 
-    width: 40%; 
-    height: auto; 
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: auto;
   }
 
 }
