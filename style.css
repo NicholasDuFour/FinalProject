@@ -173,6 +173,7 @@ button {
   margin-top: 25px;
   margin-right: 25px;
   margin-bottom: 25px;
+  cursor: pointer;
 }
 
 .imagebuttoncontainer img {

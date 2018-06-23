@@ -17,14 +17,20 @@ const typeComponent = {
   </div>
 
   <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Jewelry');">
-    <img src="images/calligraphy.jpg" alt="Calligraphy">
-    <div class="imagebuttonoverlay"><p>Calligraphy</p></div>
+    <img src="images/jewlery.jpg" alt="Jewelry">
+    <div class="imagebuttonoverlay"><p>Jewelry</p></div>
   </div>
 
-  
+  <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Lighting');">
+    <img src="images/lights.jpg" alt="Lights">
+    <div class="imagebuttonoverlay"><p>Lighting</p></div>
+  </div>
 
-    <button type="button" class="jewelry" ng-click="$ctrl.displayClass('Jewelry');">Jewelry</button>
-    <button type="button" class="lighting" ng-click="$ctrl.displayClass('Lighting Devices');">Lighting Devices</button>
+  <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Multiples');">
+    <img src="images/jewlery.jpg" alt="Multiples">
+    <div class="imagebuttonoverlay"><p>Multiples</p></div>
+  </div>
+
     <button type="button" class="multiples" ng-click="$ctrl.displayClass('Multiples');">Multiples</button>
     <button type="button" class="paintings" ng-click="$ctrl.displayClass('Paintings');">Paintings</button>
     <button type="button" class="photographs" ng-click="$ctrl.displayClass('Photographs');">Photographs</button>

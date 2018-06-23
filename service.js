@@ -6,8 +6,6 @@ function TestService($http, $q) {
   let cultureList;
   let finalClassList;
   let finalColorArray;
-  let noDuplicateColorsArray = [];
-  let output = [];
   let cultureTest;
   let page = 1;
   let key = "88bb71d0-7015-11e8-9d38-6fd658e729d6";
