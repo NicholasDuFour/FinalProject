@@ -8,9 +8,11 @@ const cultureImage = {
     <img ng-src="{{item.images[0].baseimageurl}}">
     <button ng-click="showme=true">Learn More</button>
 
-    <section ng-show="showme">
-        <p ng-click="showme=false">Close</p>
-        <h3>{{ item.title || 'No title available' }}</h3>
+    <section ng-show="showme" class="moreinfo">
+          <section class="closebtn">
+            <i ng-click="showme=false" class="material-icons">close</i>
+          </section>
+        <h4>{{ item.title || 'No title available' }}</h4>
         <p>Artist: {{ item.people[0].name || 'No artist available'  }}</p>
         <p>Date: {{item.dated || 'No date available' }}</p>
         <p>Type: {{item.classification || 'No description available' }}</p>
