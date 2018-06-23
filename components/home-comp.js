@@ -17,17 +17,25 @@ const homeComponent = {
     <div class="imagebuttonoverlay"><p>color</p></div>
     </div>
     <a href="#!/type-comp" div class="imagebuttoncontainer"</a>
-        <img src="images/glass.jpg" alt="Stained Glass">
+        <img src="images/stained-glass.jpg" alt="Stained Glass">
     <div class="imagebuttonoverlay"><p>type</p></div>
     </div>
     <a href="#!/culture-comp" div class="imagebuttoncontainer"</a>
         <img src="images/lanterns.jpg" alt="Lanterns">
     <div class="imagebuttonoverlay"><p>culture</p></div>
     </div>
-
-
 </section>
 
+    `,
+}
+
+
+
+angular
+.module("app")
+.component("homeComponent", homeComponent);
+
+/* 
 <section class="mainbuttons">
 
 
@@ -41,11 +49,5 @@ const homeComponent = {
 
 
   </section>
-    `,
-}
 
-
-
-angular
-.module("app")
-.component("homeComponent", homeComponent);
+*/ 
