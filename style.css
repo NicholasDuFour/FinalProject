@@ -168,7 +168,7 @@ button {
   position: relative;
   font-size: 0;
   width: 250px;
-  margin: 25px; 
+  margin: 25px;
   cursor: pointer;
 }
 
@@ -199,12 +199,21 @@ button {
   border: 1px solid grey;
   border-radius: 5px;
   padding: 15px;
-  width: 500px;
+  width: 320px;
 }
 
 .moreinfo h4 {
   font-size: 18px;
   font-style: italic;
+}
+
+.learn {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100px;
 }
 
 .closebtn {
@@ -271,6 +280,14 @@ button {
     justify-content: center;
     width: 40%;
     height: auto;
+  }
+
+  .learn {
+    width: 135px;
+  }
+
+  .moreinfo {
+    width: 500px;
   }
 
 }

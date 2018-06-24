@@ -6,7 +6,7 @@ const cultureImage = {
     <div class="typefiles" ng-repeat="item in $ctrl.cultureRepeat track by $index" ng-show="item.images[1]">
 
     <img ng-src="{{item.images[0].baseimageurl}}">
-    <button ng-click="showme=true">Learn More</button>
+    <button class="learn" ng-click="showme=true">Learn More</button>
 
     <section ng-show="showme" class="moreinfo">
           <section class="closebtn">
