@@ -9,6 +9,7 @@ const homeComponent = {
             <h1>Blank Canvas</h1>
         </a>
     </header>
+    
     <div class="container">
         <img class="image" src="images/igor-miske-177849-unsplash.jpg" alt="museum">
     </div>
