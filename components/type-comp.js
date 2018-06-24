@@ -1,5 +1,12 @@
 const typeComponent = {
   template: `
+  <header class="header">
+    <img class="logo" src="images/logo.png">
+      <a href="#!/home-comp" id="headerlink">
+        <h1>Blank Canvas</h1>
+      </a>
+  </header>
+  
   <section class="buttoncontainer">
   <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Albums');">
     <img src="images/album.jpg" alt="Album">

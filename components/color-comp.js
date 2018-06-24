@@ -2,8 +2,14 @@
 
 const colorComponent = {
   template: `
+  <header class="header">
+    <img class="logo" src="images/logo.png">
+      <a href="#!/home-comp" id="headerlink">
+        <h1>Blank Canvas</h1>
+      </a>
+  </header>
+  
   <section class="buttoncontainer">
-
     <button type="button" class="red" ng-click="$ctrl.colorFinder('Red');">Red</button>
     <button type="button" class="orange" ng-click="$ctrl.colorFinder('Orange');">Orange</button>
     <button type="button" class="yellow" ng-click="$ctrl.colorFinder('Yellow');">Yellow</button>

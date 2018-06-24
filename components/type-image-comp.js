@@ -1,6 +1,13 @@
 "use strict";
 const imagesComponent = {
   template: `
+  <header class="home-header">
+    <img class="logo" src="images/logo.png">
+    <a href="#!/home-comp" id="headerlink">
+        <h1>Blank Canvas</h1>
+    </a>
+  </header>
+  
   <div class="typefiles" ng-repeat="item in $ctrl.testItems track by $index" ng-show="item.images[1]">
 
     <img ng-src="{{item.images[0].baseimageurl}}">

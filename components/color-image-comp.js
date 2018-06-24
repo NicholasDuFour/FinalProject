@@ -2,7 +2,15 @@
 
 const colorImages = {
   template:
-  `<div class="typefiles" ng-repeat="item in $ctrl.checkImages track by $index" ng-show="item.images[1]">
+  `
+  <header class="home-header">
+    <img class="logo" src="images/logo.png">
+    <a href="#!/home-comp" id="headerlink">
+        <h1>Blank Canvas</h1>
+    </a>
+  </header>  
+  
+  <div class="typefiles" ng-repeat="item in $ctrl.checkImages track by $index" ng-show="item.images[1]">
 
     <img ng-src="{{item.images[0].baseimageurl}}">
     <button class="learn" ng-click="showme=true">Learn More</button>
