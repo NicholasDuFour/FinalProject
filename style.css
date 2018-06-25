@@ -100,23 +100,6 @@ font-size: 45px;
   justify-content: center;
   text-align: center;
 }
-.container:after {
-  position: absolute;
-  content: "";
-  top: 1vw;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.60);
-  -webkit-filter: blur(5vw);
-  -moz-filter: blur(5vw);
-  -ms-filter: blur(5vw);
-  filter: blur(5vw);
-  background: linear-gradient(270deg, #ecece1, #ecece1);
-}
 
 .image {
   width: 100%;
@@ -459,5 +442,22 @@ header {
   margin-top: 15%;
 }
 
+.container:after {
+  position: absolute;
+  content: "";
+  top: 1vw;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.60);
+  -webkit-filter: blur(5vw);
+  -moz-filter: blur(5vw);
+  -ms-filter: blur(5vw);
+  filter: blur(5vw);
+  background: linear-gradient(270deg, #ecece1, #ecece1);
+}
 
 }
