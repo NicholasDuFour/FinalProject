@@ -11,7 +11,7 @@ const colorComponent = {
   
   <section class="buttoncontainer">
     <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('Red');">
-      <img src="images/red.jpg" alt="Red Arrow Sign">
+      <img src="images/red.jpg" alt="Red Pattern">
       <div class="imagebuttonoverlay"><p>Red</p></div>
     </div>
     <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('Orange');">
