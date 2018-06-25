@@ -5,8 +5,8 @@ function TestService($http, $q) {
   let classList;
   let cultureList;
   let finalClassList;
-  let finalColorArray;
-  let cultureTest;
+  let finalColorList;
+  let finalCultureList;
   let page = 1;
   let key = "88bb71d0-7015-11e8-9d38-6fd658e729d6";
 
@@ -25,8 +25,7 @@ function TestService($http, $q) {
                 for (let color of itemInArr.colors) {
                   if (color.hue === colorType) {
                     colorList.push(itemInArr);
-                    console.log(colorList);
-                    return colorList
+                    // return colorList
                     }
               }
             }
@@ -40,9 +39,8 @@ function TestService($http, $q) {
 }
 
 const returnColorList = () => {
-    finalColorArray = colorList;
-
-    return finalColorArray;
+    finalColorList = colorList;
+    return finalColorList;
 }
 
   const getClassification = (classType) => {
@@ -54,11 +52,14 @@ const returnColorList = () => {
           url: `https://api.harvardartmuseums.org/object?classification=${classType}&size=100&page=${i}&apikey=${key}`
         }).then((response)=>{
           for (let itemInArr of response.data.records) {
-            classList.push(itemInArr);
-            return classList
+            if (itemInArr.hasOwnProperty("images")) {
+              if (itemInArr.images[0].height > 0) {
+                classList.push(itemInArr);
+                // return classList
+              }
+            }
           }
         }) //end of then response
-        console.log(i);
         resolve(classList);
       }
     })
@@ -67,7 +68,6 @@ const returnColorList = () => {
   const returnClassificationImages = () => {
     finalClassList = classList;
     return finalClassList;
-    console.log(finalClassList);
   }
 
   const getCulture = (cultureType) => {
@@ -78,22 +78,23 @@ const returnColorList = () => {
           method: 'GET',
           url: `https://api.harvardartmuseums.org/object?culture=${cultureType}&size=100&page=${i}&apikey=${key}`
         }).then((response)=>{
-          // console.log(response);
           for (let itemInArr of response.data.records){
-            cultureList.push(itemInArr);
-            return cultureList
+            if (itemInArr.hasOwnProperty("images")) {
+              if (itemInArr.images[0].height > 0) {
+                cultureList.push(itemInArr);
+                // return cultureList
+              }
+            }
           }
         })
         resolve(cultureList);
-        // console.log(cultureList);
       } //end of for loop
     }) //end of $q
   }
 
   const returnClassificationCulture = () => {
-    cultureTest = cultureList;
-    return cultureTest;
-    console.log(cultureTest);
+    finalCultureList = cultureList;
+    return finalCultureList;
   }
 
   return {

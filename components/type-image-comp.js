@@ -7,31 +7,41 @@ const imagesComponent = {
         <h1>Blank Canvas</h1>
     </a>
   </header>
-  
-  <div class="typefiles" ng-repeat="item in $ctrl.testItems track by $index" ng-show="item.images[1]">
 
-    <img ng-src="{{item.images[0].baseimageurl}}">
-    <button class="learn" ng-click="showme=true">Learn More</button>
+  <section class="slideshow">
+    <div class="typefiles">
+      <img class="repimg" ng-src="{{ $ctrl.typeRepeat[$ctrl.count].images[0].baseimageurl }}">
+      <i class="material-icons md-36 prev" ng-click="$ctrl.goBack();">arrow_back_ios</i>
+      <i class="material-icons md-36 next" ng-click="$ctrl.goForward();">arrow_forward_ios</i>
+      <button class="learn" ng-hide="showme" ng-click="showme=true">Learn More</button>
+    </div>
+  </section>
+
 
     <section ng-show="showme" class="moreinfo">
         <section class="closebtn">
           <i ng-click="showme=false" class="material-icons">close</i>
         </section>
-      <h4>{{ item.title || 'No title available' }}</h4>
-      <p>Artist: {{ item.people[0].name || 'No artist available'  }}</p>
-      <p>Date: {{item.dated || 'No date available' }}</p>
-      <p>Type: {{item.classification || 'No description available' }}</p>
-      <p>Medium: {{item.medium || 'No description available' }}</p>
-      <p>Division: {{item.division || 'No description available' }}</p>
+      <h4>{{ $ctrl.typeRepeat[$ctrl.count].title || 'No title available' }}</h4>
+      <p>Artist: {{ $ctrl.typeRepeat[$ctrl.count].people[0].name || 'No artist available'  }}</p>
+      <p>Date: {{ $ctrl.typeRepeat[$ctrl.count].dated || 'No date available' }}</p>
+      <p>Type: {{ $ctrl.typeRepeat[$ctrl.count].classification || 'No description available' }}</p>
+      <p>Medium: {{ $ctrl.typeRepeat[$ctrl.count].medium || 'No description available' }}</p>
+      <p>Division: {{ $ctrl.typeRepeat[$ctrl.count].division || 'No description available' }}</p>
     </section>
 
-  </div>
-
   `,
-  controller: function(TestService){
+  controller: [ "TestService", function(TestService) {
     const vm = this;
-      vm.testItems = TestService.returnClassificationImages();
-  }
+      vm.typeRepeat = TestService.returnClassificationImages();
+      vm.count = 0;
+      vm.goForward = () => {
+        vm.count++;
+      }
+      vm.goBack = () => {
+        vm.count--;
+      }
+  }]
 
 }
 
@@ -40,19 +50,3 @@ angular
   .module("app")
   .component("imagesComponent", imagesComponent);
 
-
-  /*
-    // controller: ["TestService", function (TestService){
-  //   const vm = this;
-  //   vm.artList = [];
-  //   TestService.getInfo().then((response) =>{
-  //     // for (let i = 0; i < 100; i++) {
-  //     //   if (response.data.records[i].imagecount > 0){
-  //     //     vm.artList.push(response.data.records[i]);
-  //         // console.log(response.data.records);
-  //       }
-  //   )
-
-  // }]
-  // // response.data.records[i].imagecount > 0
-  */
