@@ -29,7 +29,7 @@ const colorImages = {
   </div>
   `
   ,
-  controller: [ "TestService", function(TestService){
+  controller: ["TestService", function(TestService){
     const vm = this;
     console.log('hello');
     vm.checkImages = TestService.returnColorList();
