@@ -3,7 +3,7 @@
   box-sizing: border-box;
   padding: 0;
   border: none;
-  margin: 0; 
+  margin: 0;
   font-family: 'Playfair Display SC', serif;
   font-family: 'Playfair Display', serif;
 }
@@ -18,17 +18,6 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.home-header {
-  background-color: white;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  padding: 12px;
-  width: 100%;
-}
 
 .home-header{
   background-color: white;
@@ -56,7 +45,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 2;
-} 
+}
 
 #headerlink:visited {
   color: black;
@@ -106,7 +95,7 @@ font-size: 45px;
   border-bottom: 1px solid #ccc;
 }
 
-
+/* Maybe not needed anymore?
 .colorlink, .typelink, .culturelink {
   display: flex;
   justify-content: center;
@@ -116,13 +105,17 @@ font-size: 45px;
   width: 70%;
   margin: 10px;
   cursor: pointer;
-}
-
-.colorlink, .typelink, .culturelink {
   color: white;
   font-size: 30px;
   text-shadow: 2px 2px 2px #424da8;
 }
+
+ .colorlink, .typelink, .culturelink {
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px #424da8;
+}
+^-------------------*/ 
 
 a:link {
   text-decoration: none;
@@ -177,7 +170,7 @@ button {
   flex-flow: wrap;
   width: 100%;
   justify-content: center;
-  margin-top: 50%; 
+  margin-top: 50%;
 }
 
 .ourimages {
@@ -193,7 +186,7 @@ button {
   align-items: center;
   width: 100%;
   height: 0 auto;
-  margin-top: 30px; 
+  margin-top: 30px;
 }
 
 
@@ -215,21 +208,21 @@ button {
 .homebutton img {
   width: 100%;
   height: 92%;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 .imagebuttoncontainer {
   position: relative;
   font-size: 0;
   width: 250px;
-  margin: 25px; 
+  margin: 25px;
   cursor: pointer;
 }
 
 .imagebuttoncontainer img {
   width: 100%;
   height: 92%;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 .imagebuttonoverlay {
@@ -246,7 +239,7 @@ button {
 }
 
 .imagebuttonoverlay:hover {
-  width: 66%; 
+  width: 66%;
 }
 
 .imagebuttonoverlay p {
@@ -262,7 +255,7 @@ button {
   width: 320px;
 }
 
-moreinfo > h4, p {
+.moreinfo > h4, p {
   margin: 8px;
 }
 
@@ -291,7 +284,7 @@ moreinfo > h4, p {
 
 @media only screen and(min-width: 426px) {
 .buttoncontainer {
-  margin-top: 20%; 
+  margin-top: 20%;
 }
 
 }
@@ -319,7 +312,7 @@ h1 {
 }
 
 .buttoncontainer {
-  margin-top: 20%; 
+  margin-top: 20%;
 }
 
 .text-flex {
@@ -376,7 +369,7 @@ h1 {
 
 .image {
   width: 55%;
-  margin-top: 21px; 
+  margin-top: 21px;
 }
 
 .text-flex {
@@ -388,7 +381,7 @@ header {
 }
 
 .buttoncontainer {
-  margin-top: 15%; 
+  margin-top: 15%;
 }
 
 }
