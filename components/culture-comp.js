@@ -2,6 +2,13 @@
 
 const cultureComponent = {
     template: `
+    <header class="header">
+        <img class="logo" src="images/logo.png">
+        <a href="#!/home-comp" id="headerlink">
+            <h1>Blank Canvas</h1>
+        </a>
+    </header>
+        
     <section class="buttoncontainer">
     <div class="imagebuttoncontainer" ng-click="$ctrl.displayCulture('American');">
         <img src="images/america.jpg" alt="Statue of Liberty">
