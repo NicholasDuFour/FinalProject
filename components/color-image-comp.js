@@ -3,7 +3,7 @@
 const colorImages = {
   template:
   `
-  <header class="home-header">
+  <header class="header">
     <img class="logo" src="images/logo.png">
     <a href="#!/home-comp" id="headerlink">
         <h1>Blank Canvas</h1>

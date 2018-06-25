@@ -11,10 +11,6 @@
 body {
   background-color: black;
   color: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -159,6 +155,7 @@ button {
   justify-content: center;
   width: 60%;
   height: auto;
+  margin-top: 40%; 
 }
 
 .homebutton {
@@ -310,6 +307,7 @@ h1 {
   justify-content: center;
   width: 40%;
   height: auto;
+  margin-top: 18%; 
 }
 
 
@@ -347,5 +345,6 @@ header {
 .buttoncontainer {
   margin-top: 15%;
 }
+
 
 }
