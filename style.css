@@ -95,48 +95,12 @@ font-size: 45px;
   border-bottom: 1px solid #ccc;
 }
 
-/* Maybe not needed anymore?
-.colorlink, .typelink, .culturelink {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 70%;
-  margin: 10px;
-  cursor: pointer;
-  color: white;
-  font-size: 30px;
-  text-shadow: 2px 2px 2px #424da8;
-}
-
- .colorlink, .typelink, .culturelink {
-  color: white;
-  font-size: 30px;
-  text-shadow: 2px 2px 2px #424da8;
-}
-^-------------------*/ 
 
 a:link {
   text-decoration: none;
   color: white;
 }
-/*Styles for the main three categories*/
 
-.colorlink {
-  background-image:url("images/paint.jpg");
-  background-repeat: no-repeat;
-}
-
-.typelink {
-  background-image:url("images/glass.jpg");
-  background-repeat: no-repeat;
-}
-
-.culturelink {
-  background-image:url("images/lanterns.jpg");
-  background-repeat: no-repeat;
-}
 
 .mainbuttons {
   display: flex;
