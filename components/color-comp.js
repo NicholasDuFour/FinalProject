@@ -10,16 +10,46 @@ const colorComponent = {
   </header>
   
   <section class="buttoncontainer">
-    <button type="button" class="red" ng-click="$ctrl.colorFinder('Red');">Red</button>
-    <button type="button" class="orange" ng-click="$ctrl.colorFinder('Orange');">Orange</button>
-    <button type="button" class="yellow" ng-click="$ctrl.colorFinder('Yellow');">Yellow</button>
-    <button type="button" class="green" ng-click="$ctrl.colorFinder('Green');">Green</button>
-    <button type="button" class="blue" ng-click="$ctrl.colorFinder('Blue');">Blue</button>
-    <button type="button" class="violet" ng-click="$ctrl.colorFinder('Violet');">Violet</button>
-    <button type="button" class="black" ng-click="$ctrl.colorFinder('Black');">Black</button>
-    <button type="button" class="white" ng-click="$ctrl.colorFinder('White');">White</button>
-    <button type="button" class= "brown" ng-click="$ctrl.colorFinder('Brown');">Brown</button>
-    <button type="button" class="grey" ng-click="$ctrl.colorFinder('Grey');">Grey</button>
+    <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('Red');">
+      <img src="images/red.jpg" alt="Red Arrow Sign">
+      <div class="imagebuttonoverlay"><p>Red</p></div>
+    </div>
+    <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('Orange');">
+      <img src="images/orange.jpg" alt="Orange Spiral Staircase">
+      <div class="imagebuttonoverlay"><p>Orange</p></div>
+    </div>
+    <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('Yellow');">
+      <img src="images/yellow.jpg" alt="Yellow Umbrellas">
+      <div class="imagebuttonoverlay"><p>Yellow</p></div>
+    </div>
+    <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('Green');">
+      <img src="images/green.jpg" alt="Green Crevasse">
+      <div class="imagebuttonoverlay"><p>Green</p></div>
+    </div>
+    <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('Blue');">
+      <img src="images/blue.jpg" alt="Blue Architecture">
+      <div class="imagebuttonoverlay"><p>Blue</p></div>
+    </div>
+    <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('Violet');">
+      <img src="images/violet.jpg" alt="Violet Architecture">
+      <div class="imagebuttonoverlay"><p>Violet</p></div>
+    </div>
+    <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('Black');">
+      <img src="images/black.jpg" alt="Black Portrait">
+      <div class="imagebuttonoverlay"><p>Black</p></div>
+    </div>
+    <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('White');">
+      <img src="images/white.jpg" alt="White Architecture">
+      <div class="imagebuttonoverlay"><p>White</p></div>
+    </div>
+    <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('Brown');">
+      <img src="images/brown.jpg" alt="Brown Wood Grain">
+      <div class="imagebuttonoverlay"><p>Brown</p></div>
+    </div>
+    <div class="imagebuttoncontainer" ng-click="$ctrl.colorFinder('Grey');">
+      <img src="images/grey.jpg" alt="Grey Architecture">
+      <div class="imagebuttonoverlay"><p>Grey</p></div>
+    </div>
   </section> 
   `,
   controller: ["$location", "TestService", function($location, TestService){
