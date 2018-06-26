@@ -128,7 +128,7 @@ h1 {
 
 @keyframes pop-in {
   0% {
-    transform: translateY(-4rem) scale(.8); 
+    transform: translateY(-4rem) scale(.8);
   }
   100% {
     opacity: 1;
@@ -416,6 +416,10 @@ h1 {
 
 
 .learn {
+  width: 135px;
+}
+
+.learn:hover {
   width: 135px;
 }
 
