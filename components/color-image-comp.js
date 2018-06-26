@@ -41,6 +41,7 @@ const colorImages = {
       <section class="closebtn">
         <i ng-click="showme=false" class="material-icons">close</i>
       </section>
+    <img ng-src="{{item.images[0].baseimageurl}}">
     <h4>{{ $ctrl.colorRepeat[$ctrl.count].title || 'No title available' }}</h4>
     <p>Artist: {{ $ctrl.colorRepeat[$ctrl.count].people[0].name || 'No artist available'  }}</p>
     <p>Date: {{ $ctrl.colorRepeat[$ctrl.count].dated || 'No date available' }}</p>

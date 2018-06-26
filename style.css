@@ -426,10 +426,6 @@ h1 {
   width: 135px;
 }
 
-.moreinfo {
-  width: 500px;
-}
-
 
 }
 
@@ -477,6 +473,9 @@ header {
 }
 .typefilesdesktop img {
   width: 200px;
+}
+.moreinfo {
+  width: 500px;
 }
 
 
