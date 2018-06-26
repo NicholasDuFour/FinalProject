@@ -17,7 +17,6 @@ body {
 /* START SLIDESHOW */
 .slideshow {
   max-width: 1000px;
-  /* position: relative; */
   margin: auto;
   display: flex;
   justify-content: center;
@@ -30,7 +29,7 @@ body {
 .prev, .next {
   cursor: pointer;
   margin-top: 50px;
-  /* margin-left: 7px; */
+
 
 }
 
@@ -43,14 +42,14 @@ body {
 }
 
 .prev {
-  /* left: 10%; */
+
   display: flex;
   align-items: center;
   margin-left: 7px;
 }
 
 .next {
-  /* right: 24%; */
+
   display: flex;
   align-items: center;
   margin-right: 7px;
@@ -311,11 +310,11 @@ button {
   margin: 5px auto;
 }
 
-.moreinfo > h4, p {
+.moreinfo, .typefiles > h4, p {
   margin: 8px;
 }
 
-.moreinfo h4 {
+.moreinfo h4, .typefiles h4 {
   font-size: 18px;
   font-style: italic;
 }
@@ -453,9 +452,11 @@ header {
 .buttoncontainer {
   margin-top: 15%;
 }
+
 .slideshow {
   display: none;
 }
+
 .repeatedimages {
   width: 100%;
   display: flex;
@@ -465,6 +466,7 @@ header {
   z-index: 0;
   position: relative;
 }
+
 .typefilesdesktop {
   display: flex;
   flex-direction: column;
@@ -474,8 +476,18 @@ header {
   height: 0 auto;
   margin: 25px;
 }
+
 .typefilesdesktop img {
   width: 200px;
+  transition:transform 0.25s ease;
+}
+
+.typefilesdesktop img:hover {
+  cursor: zoom-in;
+}
+
+.typefilesdesktop img:active {
+  transform:scale(1.9);
 }
 
 .moreinfo {
@@ -511,6 +523,7 @@ header {
 
 
 }
+
 @media only screen and (min-width: 1150px){
 .container:after {
   position: absolute;
