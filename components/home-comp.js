@@ -1,5 +1,4 @@
 "use strict";
-console.log("home comp!");
 
 const homeComponent = {
     template: `
@@ -22,7 +21,7 @@ const homeComponent = {
     </section>
 
     <section class="homebuttoncontainer">
-    <a href="#!/color-comp" div class="homebutton"</a>
+        <a href="#!/color-comp" div class="homebutton"</a>
         <img src="images/colors.jpg" alt="Paint">
     <div class="imagebuttonoverlayhome"><p>color</p></div>
     </div>
@@ -44,20 +43,3 @@ const homeComponent = {
 angular
 .module("app")
 .component("homeComponent", homeComponent);
-
-/* 
-<section class="mainbuttons">
-
-
-        <a href="#!/color-comp" class="colorlink">color</a>
-
-    
-        <a href="#!/type-comp" class="typelink">type</a>
-
-
-        <a href="#!/culture-comp" class="culturelink">culture</a>
-
-
-  </section>
-
-*/ 

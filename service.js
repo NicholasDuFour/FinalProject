@@ -25,7 +25,6 @@ function TestService($http, $q) {
                 for (let color of itemInArr.colors) {
                   if (color.hue === colorType) {
                     colorList.push(itemInArr);
-                    // return colorList
                     }
               }
             }

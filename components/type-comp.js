@@ -1,3 +1,5 @@
+"use strict"; 
+
 const typeComponent = {
   template: `
   <header class="header">
@@ -77,14 +79,14 @@ const typeComponent = {
     <img src="images/vessels.jpg" alt="Vessels">
     <div class="imagebuttonoverlay"><p>Vessels</p></div>
   </div>
-  
+
   </section>
   `,
   controller: ["$location", "TestService", function($location,TestService){
     const vm = this; 
     vm.displayClass = function (classType) {
       TestService.getClassification(classType).then(() => {
-        $location.path("/images-comp");
+        $location.path("/type-images-comp");
       });
     } 
   }]

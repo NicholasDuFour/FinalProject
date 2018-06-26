@@ -54,29 +54,14 @@ const colorComponent = {
   `,
   controller: ["$location", "TestService", function($location, TestService){
     const vm = this; 
-    vm.colorList = [];
-    const sortArtObject = (colorType, response) => {
-    };
-    vm.testColor = null;
     vm.colorFinder = function (colorType) {
-      vm.testColor = colorType;
       TestService.getColor(colorType).then((response) => {
-        vm.coolStuff = response;
         $location.path("/color-image-comp");
-
       });
     };
-    vm.nextColorPage = function () {
-      vm.colorList = [];
-      TestService.nextColorPage().then((response) => {
-        sortArtObject(vm.testColor, response);
-      })
-    }
-
   }]
 }
  
-
 
 
 angular

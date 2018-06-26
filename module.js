@@ -1,6 +1,5 @@
 "use strict";
 
-console.log("module!"); 
 angular
     .module("app", ["ngRoute"])
     .config(function($routeProvider) {
@@ -30,19 +29,14 @@ angular
             <culture-image></culture-image>
              `
         })
-        .when("/color-image", {
-            template: `
-            <color-image></color-image>
-             `
-        })
         .when("/type-comp", {
             template: `
             <type-component></type-component>
              `
         })
-        .when("/images-comp", {
+        .when("/type-images-comp", {
             template: `
-            <images-component></images-component>
+            <type-images-component></type-images-component>
              `
         })
         .otherwise({ redirectTo: "/home-comp"});

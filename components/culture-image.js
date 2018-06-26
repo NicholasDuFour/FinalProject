@@ -17,15 +17,14 @@ const cultureImage = {
 
       <div class="typefiles">
         <img class="repimg" ng-src="{{ $ctrl.cultureRepeat[$ctrl.count].images[0].baseimageurl }}">
-        <section>
-        <h4>{{ $ctrl.cultureRepeat[$ctrl.count].title || 'No title available' }}</h4>
-        <p>Artist: {{ $ctrl.cultureRepeat[$ctrl.count].people[0].name || 'No artist available'  }}</p>
-        <p>Date: {{ $ctrl.cultureRepeat[$ctrl.count].dated || 'No date available' }}</p>
-        <p>Type: {{ $ctrl.cultureRepeat[$ctrl.count].classification || 'No description available' }}</p>
-        <p>Medium: {{ $ctrl.cultureRepeat[$ctrl.count].medium || 'No description available' }}</p>
-        <p>Division: {{ $ctrl.cultureRepeat[$ctrl.count].division || 'No description available' }}</p>
+        <section class="information">
+          <h4>{{ $ctrl.cultureRepeat[$ctrl.count].title || 'No title available' }}</h4>
+          <p>Artist: {{ $ctrl.cultureRepeat[$ctrl.count].people[0].name || 'No artist available'  }}</p>
+          <p>Date: {{ $ctrl.cultureRepeat[$ctrl.count].dated || 'No date available' }}</p>
+          <p>Type: {{ $ctrl.cultureRepeat[$ctrl.count].classification || 'No description available' }}</p>
+          <p>Medium: {{ $ctrl.cultureRepeat[$ctrl.count].medium || 'No description available' }}</p>
+          <p>Division: {{ $ctrl.cultureRepeat[$ctrl.count].division || 'No description available' }}</p>
         </section>
-        
       </div>
 
       <section class="next">
@@ -75,5 +74,3 @@ const cultureImage = {
 angular
     .module("app")
     .component("cultureImage", cultureImage);
-
-    {/* <img ng-src="https://ids.lib.harvard.edu/ids/view/{{item.images[0].idsid}}"> */}
