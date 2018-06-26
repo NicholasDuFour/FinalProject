@@ -38,12 +38,13 @@ const imagesComponent = {
         <section class="closebtn">
           <i ng-click="showme=false" class="material-icons">close</i>
         </section>
-      <h4>{{ $ctrl.typeRepeat[$ctrl.count].title || 'No title available' }}</h4>
-      <p>Artist: {{ $ctrl.typeRepeat[$ctrl.count].people[0].name || 'No artist available'  }}</p>
-      <p>Date: {{ $ctrl.typeRepeat[$ctrl.count].dated || 'No date available' }}</p>
-      <p>Type: {{ $ctrl.typeRepeat[$ctrl.count].classification || 'No description available' }}</p>
-      <p>Medium: {{ $ctrl.typeRepeat[$ctrl.count].medium || 'No description available' }}</p>
-      <p>Division: {{ $ctrl.typeRepeat[$ctrl.count].division || 'No description available' }}</p>
+        <img ng-src="{{item.images[0].baseimageurl}}">
+        <h4>{{ item.title || 'No title available' }}</h4>
+        <p>Artist: {{ item.people[0].name || 'No artist available'  }}</p>
+        <p>Date: {{ item.dated || 'No date available' }}</p>
+        <p>Type: {{ item.classification || 'No description available' }}</p>
+        <p>Medium: {{ item.medium || 'No description available' }}</p>
+        <p>Division: {{ item.division || 'No description available' }}</p>
     </section>
     </div>
   </section>
