@@ -451,9 +451,6 @@ header {
   width: 100%;
   margin: 0 auto;
   transform: scale(.57);
-  -webkit-filter: blur(5vw);
-  -moz-filter: blur(5vw);
-  -ms-filter: blur(5vw);
   filter: blur(5vw);
   background: linear-gradient(270deg, #ecece1, #ecece1);
 }
