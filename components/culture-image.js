@@ -34,7 +34,7 @@ const cultureImage = {
     </section>
 
     <section class="repeatedimages">
-    <div class="typefilesdesktop" ng-repeat="item in $ctrl.cultureRepeat track by $index">
+    <div class="typefilesdesktop" ng-repeat="item in $ctrl.cultureRepeat | unique: 'id' track by $index">
       <img ng-src="{{item.images[0].baseimageurl}}">
       <button class="learn" ng-click="showme=true">Learn More</button>
       <section ng-show="showme" class="moreinfo">

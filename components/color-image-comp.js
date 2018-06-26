@@ -34,7 +34,7 @@ const colorImages = {
 </section>
 
 <section class="repeatedimages">
-<div class="typefilesdesktop" ng-repeat="item in $ctrl.colorRepeat track by $index">
+<div class="typefilesdesktop" ng-repeat="item in $ctrl.colorRepeat | unique: 'id' track by $index">
   <img ng-src="{{item.images[0].baseimageurl}}">
   <button class="learn" ng-click="showme=true">Learn More</button>
   <section ng-show="showme" class="moreinfo">

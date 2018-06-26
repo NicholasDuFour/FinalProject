@@ -39,9 +39,11 @@ function TestService($http, $q) {
 }
 
 const returnColorList = () => {
-    finalColorList = colorList;
-    return finalColorList;
-}
+  finalColorList = colorList;
+  return finalColorList;
+  }
+
+
 
   const getClassification = (classType) => {
     classList = [];
