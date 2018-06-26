@@ -11,12 +11,19 @@ const colorImages = {
 </header>
 
 <section class="slideshow">
+
+<section class="prev">
+  <i class="material-icons md-36 prev" ng-click="$ctrl.goBack();">arrow_back_ios</i>
+</section>
+
   <div class="typefiles">
     <img class="repimg" ng-src="{{ $ctrl.colorRepeat[$ctrl.count].images[0].baseimageurl }}">
-    <i class="material-icons md-36 prev" ng-click="$ctrl.goBack();">arrow_back_ios</i>
-    <i class="material-icons md-36 next" ng-click="$ctrl.goForward();">arrow_forward_ios</i>
     <button class="learn" ng-hide="showme" ng-click="showme=true">Learn More</button>
   </div>
+
+  <section class="next">
+    <i class="material-icons md-36 next" ng-click="$ctrl.goForward();">arrow_forward_ios</i>
+  </section>
 </section>
 
 
