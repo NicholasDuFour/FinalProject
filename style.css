@@ -30,12 +30,12 @@ body {
 .prev, .next {
   cursor: pointer;
   margin-top: 50px;
-  margin-left: 7px;
+  /* margin-left: 7px; */
 
 }
 
 .prev:hover, .next:hover {
-  color: lightblue;
+  color: #b3b3b3;
 }
 
 .prev:active, .next:active {
@@ -46,12 +46,14 @@ body {
   /* left: 10%; */
   display: flex;
   align-items: center;
+  margin-left: 7px;
 }
 
 .next {
   /* right: 24%; */
   display: flex;
   align-items: center;
+  margin-right: 7px;
 }
 
 .material-icons.md-36 {
@@ -94,7 +96,7 @@ body {
 }
 
 h1 {
-font-size: 45px;
+  font-size: 45px;
 }
 
 .logo {
@@ -126,7 +128,6 @@ font-size: 45px;
 
 @keyframes pop-in {
   0% {
-    opacity: 0;
     transform: translateY(-4rem) scale(.8);
   }
   100% {
@@ -328,6 +329,15 @@ button {
   width: 100px;
 }
 
+.learn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100px;
+}
+
 
 .closebtn {
   display: flex;
@@ -412,6 +422,10 @@ h1 {
   width: 135px;
 }
 
+.learn:hover {
+  width: 135px;
+}
+
 .moreinfo {
   width: 500px;
 }
@@ -475,8 +489,8 @@ header {
   left: 0;
   right: 0;
   z-index: -1;
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 95%;
   margin: 0 auto;
   transform: scale(.55);
   filter: blur(5vw);

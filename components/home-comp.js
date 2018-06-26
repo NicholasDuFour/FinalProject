@@ -18,7 +18,7 @@ const homeComponent = {
 
     <section class="text-flex">
         <div class="text-wrapper animate-pop-in">The Art of Discovery</div>
-        <p class="searchby animate-pop-in">search for art by...</p>
+        <p class="animate-pop-in">search for art by...</p>
     </section>
 
     <section class="homebuttoncontainer">
