@@ -214,6 +214,9 @@ button {
   height: 0 auto;
   margin-top: 30px;
 }
+.typefilesdesktop {
+  display: none;
+}
 
 
 .typefiles img {
@@ -439,6 +442,29 @@ header {
 .buttoncontainer {
   margin-top: 15%;
 }
+.slideshow {
+  display: none;
+}
+.repeatedimages {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+.typefilesdesktop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 0 auto;
+  margin: 25px;
+}
+.typefilesdesktop img {
+  width: 200px;
+}
+
 
 }
 @media only screen and (min-width: 1150px){

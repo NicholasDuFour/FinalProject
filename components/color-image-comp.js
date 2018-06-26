@@ -18,7 +18,14 @@ const colorImages = {
 
   <div class="typefiles">
     <img class="repimg" ng-src="{{ $ctrl.colorRepeat[$ctrl.count].images[0].baseimageurl }}">
-    <button class="learn" ng-hide="showme" ng-click="showme=true">Learn More</button>
+    <section>
+    <h4>{{ $ctrl.colorRepeat[$ctrl.count].title || 'No title available' }}</h4>
+    <p>Artist: {{ $ctrl.colorRepeat[$ctrl.count].people[0].name || 'No artist available'  }}</p>
+    <p>Date: {{ $ctrl.colorRepeat[$ctrl.count].dated || 'No date available' }}</p>
+    <p>Type: {{ $ctrl.colorRepeat[$ctrl.count].classification || 'No description available' }}</p>
+    <p>Medium: {{ $ctrl.colorRepeat[$ctrl.count].medium || 'No description available' }}</p>
+    <p>Division: {{ $ctrl.colorRepeat[$ctrl.count].division || 'No description available' }}</p>
+  </section>
   </div>
 
   <section class="next">
@@ -26,7 +33,10 @@ const colorImages = {
   </section>
 </section>
 
-
+<section class="repeatedimages">
+<div class="typefilesdesktop" ng-repeat="item in $ctrl.colorRepeat track by $index">
+  <img ng-src="{{item.images[0].baseimageurl}}">
+  <button class="learn" ng-click="showme=true">Learn More</button>
   <section ng-show="showme" class="moreinfo">
       <section class="closebtn">
         <i ng-click="showme=false" class="material-icons">close</i>
@@ -38,7 +48,8 @@ const colorImages = {
     <p>Medium: {{ $ctrl.colorRepeat[$ctrl.count].medium || 'No description available' }}</p>
     <p>Division: {{ $ctrl.colorRepeat[$ctrl.count].division || 'No description available' }}</p>
   </section>
-
+  </div>
+</section>
   `
   ,
   controller: ["TestService", function(TestService){
