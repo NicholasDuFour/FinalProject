@@ -42,12 +42,12 @@ const colorImages = {
         <i ng-click="showme=false" class="material-icons">close</i>
       </section>
     <img ng-src="{{item.images[0].baseimageurl}}">
-    <h4>{{ $ctrl.colorRepeat[$ctrl.count].title || 'No title available' }}</h4>
-    <p>Artist: {{ $ctrl.colorRepeat[$ctrl.count].people[0].name || 'No artist available'  }}</p>
-    <p>Date: {{ $ctrl.colorRepeat[$ctrl.count].dated || 'No date available' }}</p>
-    <p>Type: {{ $ctrl.colorRepeat[$ctrl.count].classification || 'No description available' }}</p>
-    <p>Medium: {{ $ctrl.colorRepeat[$ctrl.count].medium || 'No description available' }}</p>
-    <p>Division: {{ $ctrl.colorRepeat[$ctrl.count].division || 'No description available' }}</p>
+    <h4>{{ item.title || 'No title available' }}</h4>
+    <p>Artist: {{ item.people[0].name || 'No artist available'  }}</p>
+    <p>Date: {{ item.dated || 'No date available' }}</p>
+    <p>Type: {{ item.classification || 'No description available' }}</p>
+    <p>Medium: {{ item.medium || 'No description available' }}</p>
+    <p>Division: {{ item.division || 'No description available' }}</p>
   </section>
   </div>
 </section>
