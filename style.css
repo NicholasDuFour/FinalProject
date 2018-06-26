@@ -440,6 +440,8 @@ header {
   margin-top: 15%;
 }
 
+}
+@media only screen and (min-width: 1150px){
 .container:after {
   position: absolute;
   content: "";
@@ -450,7 +452,7 @@ header {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  transform: scale(.57);
+  transform: scale(.55);
   filter: blur(5vw);
   background: linear-gradient(270deg, #ecece1, #ecece1);
 }
