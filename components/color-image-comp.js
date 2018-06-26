@@ -25,7 +25,7 @@ const colorImages = {
     <p>Type: {{ $ctrl.colorRepeat[$ctrl.count].classification || 'No description available' }}</p>
     <p>Medium: {{ $ctrl.colorRepeat[$ctrl.count].medium || 'No description available' }}</p>
     <p>Division: {{ $ctrl.colorRepeat[$ctrl.count].division || 'No description available' }}</p>
-  </section>
+    </section>
   </div>
 
   <section class="next">

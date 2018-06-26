@@ -15,7 +15,14 @@ const imagesComponent = {
 
     <div class="typefiles">
       <img class="repimg" ng-src="{{ $ctrl.typeRepeat[$ctrl.count].images[0].baseimageurl }}">
-      <button class="learn" ng-hide="showme" ng-click="showme=true">Learn More</button>
+      <section>
+      <h4>{{ $ctrl.typeRepeat[$ctrl.count].title || 'No title available' }}</h4>
+      <p>Artist: {{ $ctrl.typeRepeat[$ctrl.count].people[0].name || 'No artist available'  }}</p>
+      <p>Date: {{ $ctrl.typeRepeat[$ctrl.count].dated || 'No date available' }}</p>
+      <p>Type: {{ $ctrl.typeRepeat[$ctrl.count].classification || 'No description available' }}</p>
+      <p>Medium: {{ $ctrl.typeRepeat[$ctrl.count].medium || 'No description available' }}</p>
+      <p>Division: {{ $ctrl.typeRepeat[$ctrl.count].division || 'No description available' }}</p>
+      </section>
     </div>
 
     <section class="next">
@@ -23,7 +30,10 @@ const imagesComponent = {
     </section>
   </section>
 
-
+  <section class="repeatedimages">
+  <div class="typefilesdesktop" ng-repeat="item in $ctrl.typeRepeat track by $index">
+    <img ng-src="{{item.images[0].baseimageurl}}">
+    <button class="learn" ng-click="showme=true">Learn More</button>
     <section ng-show="showme" class="moreinfo">
         <section class="closebtn">
           <i ng-click="showme=false" class="material-icons">close</i>
@@ -35,6 +45,8 @@ const imagesComponent = {
       <p>Medium: {{ $ctrl.typeRepeat[$ctrl.count].medium || 'No description available' }}</p>
       <p>Division: {{ $ctrl.typeRepeat[$ctrl.count].division || 'No description available' }}</p>
     </section>
+    </div>
+  </section>
 
   `,
   controller: [ "TestService", function(TestService) {
