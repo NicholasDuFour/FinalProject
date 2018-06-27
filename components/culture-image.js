@@ -1,5 +1,4 @@
 "use strict"
-console.log("culture image!");
 
 const cultureImage = {
     template: `
@@ -24,7 +23,8 @@ const cultureImage = {
           <p>Type: {{ $ctrl.cultureRepeat[$ctrl.count].classification || 'No description available' }}</p>
           <p>Medium: {{ $ctrl.cultureRepeat[$ctrl.count].medium || 'No description available' }}</p>
           <p>Division: {{ $ctrl.cultureRepeat[$ctrl.count].division || 'No description available' }}</p>
-        </section>
+          <a ng-href="https://www.harvardartmuseums.org/collections/object/{{ $ctrl.cultureRepeat[$ctrl.count].id}}">Source</a>
+          </section>
       </div>
 
       <section class="next">
@@ -50,15 +50,16 @@ const cultureImage = {
             <p>Type: {{ item.classification || 'No description available' }}</p>
             <p>Medium: {{ item.medium || 'No description available' }}</p>
             <p>Division: {{ item.division || 'No description available' }}</p>
+            <a ng-href="https://www.harvardartmuseums.org/collections/object/{{item.id}}">Source</a>
       </div>
             </section>
       </div>
     </section>
     `,
 
-    controller: [ "TestService", function(TestService) {
+    controller: [ "ArtService", function(ArtService) {
         const vm = this;
-        vm.cultureRepeat = TestService.returnClassificationCulture();
+        vm.cultureRepeat = ArtService.returnCultureImages();
         vm.count = 0;
         vm.goForward = () => {
             vm.count++;

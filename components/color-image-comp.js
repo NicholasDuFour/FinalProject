@@ -25,7 +25,8 @@ const colorImages = {
       <p>Type: {{ $ctrl.colorRepeat[$ctrl.count].classification || 'No description available' }}</p>
       <p>Medium: {{ $ctrl.colorRepeat[$ctrl.count].medium || 'No description available' }}</p>
       <p>Division: {{ $ctrl.colorRepeat[$ctrl.count].division || 'No description available' }}</p>
-    </section>
+      <a ng-href="https://www.harvardartmuseums.org/collections/object/{{ $ctrl.colorRepeat[$ctrl.count].id}}">Source</a>
+      </section>
   </div>
 
   <section class="next">
@@ -51,15 +52,16 @@ const colorImages = {
     <p>Type: {{ item.classification || 'No description available' }}</p>
     <p>Medium: {{ item.medium || 'No description available' }}</p>
     <p>Division: {{ item.division || 'No description available' }}</p>
+    <a ng-href="https://www.harvardartmuseums.org/collections/object/{{item.id}}">Source</a>
     </div>
   </section>
   </div>
 </section>
   `
   ,
-  controller: ["TestService", function(TestService){
+  controller: ["ArtService", function(ArtService){
     const vm = this;
-    vm.colorRepeat = TestService.returnColorList();
+    vm.colorRepeat = ArtService.returnColorImages();
     vm.count = 0;
     vm.goForward = () => {
       vm.count++;

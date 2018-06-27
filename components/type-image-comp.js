@@ -22,6 +22,7 @@ const typeImagesComponent = {
         <p>Type: {{ $ctrl.typeRepeat[$ctrl.count].classification || 'No description available' }}</p>
         <p>Medium: {{ $ctrl.typeRepeat[$ctrl.count].medium || 'No description available' }}</p>
         <p>Division: {{ $ctrl.typeRepeat[$ctrl.count].division || 'No description available' }}</p>
+        <a ng-href="https://www.harvardartmuseums.org/collections/object/{{ $ctrl.typeRepeat[$ctrl.count].id}}">Source</a>
       </section>
     </div>
 
@@ -48,15 +49,16 @@ const typeImagesComponent = {
         <p>Type: {{ item.classification || 'No description available' }}</p>
         <p>Medium: {{ item.medium || 'No description available' }}</p>
         <p>Division: {{ item.division || 'No description available' }}</p>
+        <a ng-href="https://www.harvardartmuseums.org/collections/object/{{item.id}}">Source</a>
     </div>
         </section>
     </div>
   </section>
 
   `,
-  controller: [ "TestService", function(TestService) {
+  controller: [ "ArtService", function(ArtService) {
     const vm = this;
-      vm.typeRepeat = TestService.returnClassificationImages();
+      vm.typeRepeat = ArtService.returnClassificationImages();
       vm.count = 0;
       vm.goForward = () => {
         vm.count++;

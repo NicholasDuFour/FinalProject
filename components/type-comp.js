@@ -82,10 +82,10 @@ const typeComponent = {
 
   </section>
   `,
-  controller: ["$location", "TestService", function($location,TestService){
+  controller: ["$location", "ArtService", function($location,ArtService){
     const vm = this; 
     vm.displayClass = function (classType) {
-      TestService.getClassification(classType).then(() => {
+      ArtService.getClassification(classType).then(() => {
         $location.path("/type-images-comp");
       });
     } 

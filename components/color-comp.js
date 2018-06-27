@@ -52,10 +52,10 @@ const colorComponent = {
     </div>
   </section> 
   `,
-  controller: ["$location", "TestService", function($location, TestService){
+  controller: ["$location", "ArtService", function($location, ArtService){
     const vm = this; 
     vm.colorFinder = function (colorType) {
-      TestService.getColor(colorType).then((response) => {
+      ArtService.getColor(colorType).then((response) => {
         $location.path("/color-image-comp");
       });
     };

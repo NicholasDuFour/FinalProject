@@ -45,10 +45,10 @@ const cultureComponent = {
 
     `, 
 
-    controller: ["$location", "TestService", function($location,TestService){
+    controller: ["$location", "ArtService", function($location,ArtService){
         const vm = this; 
             vm.displayCulture = function (cultureType) {
-              TestService.getCulture(cultureType).then(() => {
+              ArtService.getCulture(cultureType).then(() => {
                 $location.path("/culture-image");
               });
            } 

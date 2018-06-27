@@ -1,6 +1,6 @@
 "use strict";
 
-function TestService($http, $q) {
+function ArtService($http, $q) {
   let colorList;
   let classList;
   let cultureList;
@@ -25,21 +25,21 @@ function TestService($http, $q) {
                 for (let color of itemInArr.colors) {
                   if (color.hue === colorType) {
                     colorList.push(itemInArr);
-                    }
+                  }
+                }
               }
             }
+          };
+        })
+        resolve(colorList);
+      }
+    })
+  }
 
-          }
-        };
-      })
-      resolve(colorList);
-    }
-  })
-}
-
-const returnColorList = () => {
-  finalColorList = colorList;
-  return finalColorList;
+  const returnColorImages = () => {
+    finalColorList = colorList;
+    console.log(colorList);
+    return finalColorList;
   }
 
 
@@ -56,11 +56,10 @@ const returnColorList = () => {
             if (itemInArr.hasOwnProperty("images")) {
               if (itemInArr.images[0].height > 0) {
                 classList.push(itemInArr);
-                // return classList
               }
             }
           }
-        }) //end of then response
+        })
         resolve(classList);
       }
     })
@@ -83,17 +82,16 @@ const returnColorList = () => {
             if (itemInArr.hasOwnProperty("images")) {
               if (itemInArr.images[0].height > 0) {
                 cultureList.push(itemInArr);
-                // return cultureList
               }
             }
           }
         })
         resolve(cultureList);
-      } //end of for loop
-    }) //end of $q
+      }
+    })
   }
 
-  const returnClassificationCulture = () => {
+  const returnCultureImages = () => {
     finalCultureList = cultureList;
     return finalCultureList;
   }
@@ -102,12 +100,12 @@ const returnColorList = () => {
     getClassification,
     returnClassificationImages,
     getCulture,
-    returnClassificationCulture,
+    returnCultureImages,
     getColor,
-    returnColorList
+    returnColorImages
   }
 }
 
 angular
   .module("app")
-  .factory("TestService", TestService);
+  .factory("ArtService", ArtService);
