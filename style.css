@@ -187,6 +187,8 @@ button {
   width: 100%;
   justify-content: center;
   margin-top: 50%;
+  height: 100vh;
+  width: 100vw;
 }
 
 .ourimages {

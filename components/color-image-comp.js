@@ -3,6 +3,7 @@
 const colorImages = {
   template:
   `
+  <body ng-click="showme=false">
   <header class="header">
   <img class="logo" src="images/logo.png">
   <a href="#!/home-comp" id="headerlink">
@@ -39,16 +40,13 @@ const colorImages = {
   <img ng-src="{{item.images[0].baseimageurl}}">
   <button class="learn" ng-click="showme=true">Learn More</button>
   <section ng-show="showme" class="moreinfo">
-  
-  <section class="closebtn">
-    <i ng-click="showme=false" class="material-icons">close</i>
-  </section>
-
     <div class="left">
       <img ng-src="{{item.images[0].baseimageurl}}">
     </div>
     <div class="right">
-
+    <section class="closebtn">
+      <i ng-click="showme=false" class="material-icons">close</i>
+    </section>
     <h4>{{ item.title || 'No title available' }}</h4>
     <p>Artist: {{ item.people[0].name || 'No artist available'  }}</p>
     <p>Date: {{ item.dated || 'No date available' }}</p>
@@ -60,6 +58,7 @@ const colorImages = {
   </section>
   </div>
 </section>
+</body>
   `
   ,
   controller: ["ArtService", function(ArtService){
