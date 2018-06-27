@@ -22,8 +22,8 @@ body {
 }
 
 .information {
-  height: auto; 
-  margin-top: 20px; 
+  height: auto;
+  margin-top: 20px;
 }
 
 .repimg {
@@ -330,10 +330,12 @@ button {
 
 
 .closebtn {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
   cursor: pointer;
-  padding-bottom: 30px;
+  margin-right: 4px;
+  margin-top: 4px;
 }
 
 @media only screen and(min-width: 426px) {
@@ -343,7 +345,7 @@ button {
 }
 
 @media only screen and (min-width: 768px){
-  
+
   .image {
     width: 90%;
     margin-top: 5px;
@@ -466,7 +468,7 @@ button {
   }
 
   .typefilesdesktop img:active {
-    transform:scale(1.9);
+    transform:scale(1.5);
   }
 
   .moreinfo {
@@ -481,6 +483,7 @@ button {
     margin-top: 4%;
     display: flex;
     align-items: center;
+    transition:transform 1.5s ease;
   }
 
   .left {
