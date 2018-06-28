@@ -26,7 +26,7 @@ const typeComponent = {
   </div>
 
   <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Jewelry');">
-    <img src="images/jewlery.jpg" alt="Jewelry">
+    <img src="images/jewelry.jpg" alt="Jewelry">
     <div class="imagebuttonoverlay"><p>Jewelry</p></div>
   </div>
 

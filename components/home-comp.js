@@ -11,7 +11,7 @@ const homeComponent = {
 
 
     <section class="container">
-        <img class="image" src="images/igor-miske-177849-unsplash.jpg" alt="museum">
+        <img class="image" src="images/museum1.jpg" alt="museum">
     </section>
 
 
