@@ -15,11 +15,6 @@ const typeComponent = {
     <div class="imagebuttonoverlay"><p>Albums</p></div>
   </div>
 
-  <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Books');">
-    <img src="images/books.jpg" alt="Books">
-    <div class="imagebuttonoverlay"><p>Books</p></div>
-  </div>
-
   <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Calligraphy');">
     <img src="images/calligraphy.jpg" alt="Calligraphy">
     <div class="imagebuttonoverlay"><p>Calligraphy</p></div>
@@ -28,11 +23,6 @@ const typeComponent = {
   <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Jewelry');">
     <img src="images/jewelry.jpg" alt="Jewelry">
     <div class="imagebuttonoverlay"><p>Jewelry</p></div>
-  </div>
-
-  <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Lighting');">
-    <img src="images/lights.jpg" alt="Lights">
-    <div class="imagebuttonoverlay"><p>Lighting</p></div>
   </div>
 
   <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Multiples');">
@@ -96,3 +86,15 @@ angular
   .module("app")
   .component("typeComponent", typeComponent)
 
+/*
+  <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Books');">
+    <img src="images/books.jpg" alt="Books">
+    <div class="imagebuttonoverlay"><p>Books</p></div>
+  </div>
+
+
+  <div class="imagebuttoncontainer" ng-click="$ctrl.displayClass('Lighting');">
+    <img src="images/lights.jpg" alt="Lights">
+    <div class="imagebuttonoverlay"><p>Lighting</p></div>
+  </div>
+*/
